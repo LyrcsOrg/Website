@@ -1,0 +1,142 @@
+{
+    "meta": {
+        "name": "App Landing Page With Steroids",
+        "version": 1,
+        "filePaths": [
+            "data.json",
+            "content/markdown/text-2qktkbfolbuelmqg.md",
+            "content/markdown/content-2ifyyf058pb78.md",
+            "content/html/8874iqka3r4oe5ftfvqmru.h",
+            "assets/ios-badge.svg",
+            "assets/pwa-badge.png",
+            "assets/producthunt.png",
+            "assets/light-background.svg",
+            "assets/dark-background.svg",
+            "assets/og-image.png",
+            "content/image/h1w4srv37a2ysu6inwwa.svg",
+            "content/image/xlp4hr32gum52c78p8q0.png",
+            "content/image/vlxzy6cqutugjiqapf6o.svg",
+            "content/image/4fjune8kixwrb28haf0u.png",
+            "content/image/wme4to0nxuk65tdfnrys.svg",
+            "content/image/xg6xwuc3w7jkwrh0xops.svg",
+            "content/image/0eeipmmlme0j6us6kctr.svg",
+            "content/image/s38txsl7yqbcg5lc4fv3.svg",
+            "content/image/hgugeviwvlp8i31z6dgi.svg"
+        ]
+    },
+    "configuration": {
+        "pagePathStrategy": "absolute",
+        "baseUrl": null
+    },
+    "data": {
+        "APP": {
+            "APP": {
+                "APP_NAME": "Lyrcs",
+                "TAGLINE": "The lyric writing toolkit.",
+                "ICON": "content/image/vlxzy6cqutugjiqapf6o.svg",
+                "SHOW_FEATURE": true,
+                "FEATURE_TITLE": null,
+                "FEAUTE_GRAPHIC": "content/image/xlp4hr32gum52c78p8q0.png",
+                "FEATURE_GRAPHIC_DARKMODE": "content/image/4fjune8kixwrb28haf0u.png",
+                "GOOGLE_PLAY_IMAGE": "content/image/h1w4srv37a2ysu6inwwa.svg",
+                "GOOGLE_PLAY_URL": "asd",
+                "GOOGLE_PLAY_TITLE": "Mac App Store Link",
+                "IOS_IMAGE": "assets/ios-badge.svg",
+                "IOS_URL": null,
+                "IOS_TITLE": "Get on Appstore",
+                "WEB_APP_IMAGE": "assets/pwa-badge.png",
+                "WEB_APP_URL": null,
+                "WEB_APP_TITLE": " "
+            },
+            "SCREENSHOTS": {
+                "SHOW": true,
+                "TITLE": "Screenshots",
+                "INCLUDE_LANDSCAPE": true,
+                "IMAGES": [
+                    {
+                        "IMAGE": "content/image/xg6xwuc3w7jkwrh0xops.svg"
+                    },
+                    {
+                        "IMAGE": "content/image/wme4to0nxuk65tdfnrys.svg"
+                    },
+                    {
+                        "IMAGE": "content/image/s38txsl7yqbcg5lc4fv3.svg"
+                    },
+                    {
+                        "IMAGE": "content/image/0eeipmmlme0j6us6kctr.svg"
+                    }
+                ]
+            },
+            "DESCRIPTION": {
+                "SHOW": true,
+                "TITLE": "Description",
+                "TEXT": "content/markdown/text-2qktkbfolbuelmqg.md"
+            },
+            "FEATURED_IN": {
+                "SHOW": false,
+                "TITLE": "Featured in",
+                "FEATURES": [
+                    {
+                        "IMAGE": "assets/producthunt.png",
+                        "URL": "https://github.com/"
+                    },
+                    {
+                        "IMAGE": "assets/producthunt.png",
+                        "URL": "https://github.com/"
+                    }
+                ]
+            }
+        },
+        "PAGES": {
+            "PAGES": {
+                "PAGES": [
+                    {
+                        "TITLE": "Privacy",
+                        "FILE_NAME": "privacy",
+                        "CONTENT": "content/markdown/content-2ifyyf058pb78.md"
+                    }
+                ]
+            }
+        },
+        "COMMON": {
+            "THEME": {
+                "TOOGLE_THEME": false,
+                "DEFAULT_MODE": true
+            },
+            "LIGHT_THEME": {
+                "BACKGROUND_COLOR": "#ffffff",
+                "BACKGROUND_IMAGE": "assets/light-background.svg",
+                "TEXT_COLOR": "#000000",
+                "FOOTER_TEXT_COLOR": "#8a8a8a",
+                "LINK_HOVER_TEXT_COLOR": "#454545"
+            },
+            "DARK_THEME": {
+                "BACKGROUND_COLOR": "#121212",
+                "BACKGROUND_IMAGE": "assets/dark-background.svg",
+                "TEXT_COLOR": "#ffffff",
+                "FOOTER_TEXT_COLOR": "#8a8a8a",
+                "LINK_HOVER_TEXT_COLOR": "#454545"
+            },
+            "META": {
+                "AUTHOR": null,
+                "LANGUAGE": "en",
+                "DIRECTION": "auto",
+                "TITLE": "Lyrcs App",
+                "DESCRIPTION": "The lyric writing toolkit.",
+                "KEYWORDS": "lyrics,app,mac,songwriting,syllables",
+                "FAVICON": "content/image/hgugeviwvlp8i31z6dgi.svg",
+                "OG_IMAGE": "assets/og-image.png",
+                "PRE_HTML": "content/html/8874iqka3r4oe5ftfvqmru.h",
+                "ROBOTS_INDEX": true,
+                "ROBOTS_LINKS": false
+            },
+            "FOOTER": {
+                "COPYRIGHT": "Lyrcs. All rights reserved",
+                "TEMPLATE_BY": false,
+                "POWERED_BY": false,
+                "POST_HTML": null,
+                "LINKS": []
+            }
+        }
+    }
+}
