@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html dir="auto" lang="en" >
+<head>
+	<meta charset="UTF-8" />
+	<title>Privacy - Lyrcs App</title>
+
+	<meta name="description" content="The lyric writing toolkit." />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="content/image/hgugeviwvlp8i31z6dgi.svg" />
+
+	<meta property="og:title" content="Privacy - Lyrcs App" />
+	<meta property="og:description" content="The lyric writing toolkit." />
+	<meta property="og:image" content="assets/og-image.png" />
+	<meta name="keywords" content="lyrics,app,mac,songwriting,syllables"/>
+	<meta name="robots" content="index,nofollow" />
+	<style>
+		:root {
+		  --font-xl: 42px;
+		  --font-lg: 24px;
+		  --font-md: 20px;
+		  --font-sm: 18px;
+		  --font-xs: 16px;
+		  --font-xxs: 14px;
+		
+		  --screenshot-width: 500px;
+		  --screenshot-height: 300px;
+		  /* Light */
+		  --background-light: #ffffff;
+		  --background-image-light: url(assets/light-background.svg);
+		  --text-light: #000000;
+		  --text-color-footer-light: #8a8a8a;
+		  --text-color-link-hover-light: #454545;
+		  
+		  /* Dark */
+		  --background-dark: #121212;
+		  --background-image-dark: url(assets/dark-background.svg);
+		  --text-dark: #ffffff;
+		  --text-color-footer-dark: #8a8a8a;
+		  --text-color-link-hover-dark: #454545;
+		}
+		@media (max-width: 768px) {
+		  :root {
+		    --font-xl: 18px;
+		    --font-lg: 16px;
+		    --font-md: 14px;
+		    --font-sm: 12px;
+		    --font-xs: 12px;
+		    --font-xxs: 12px;
+		
+		    --screenshot-width: 250px;
+		    --screenshot-height: 300px;
+		  }
+		}
+		
+		/* Default */
+		html {
+		  --background-color: var(--background-light);
+		  --text-color: var(--text-light);
+		  --background-image: var(--background-image-light);
+		  --contrast-background-color: var(--background-dark);
+		  --text-color-footer: var(--text-color-footer-light);
+		  --text-color-link-hover: var(--text-color-link-hover-light)
+		}
+		
+		body {
+		  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		  color: var(--text-color);
+		  display: flex;
+		  min-height: 100vh;
+		  flex-direction: column;
+		  font-size: var(--font-md);
+		  background-color: var(--background-color);
+		  background-image: var(--background-image);
+		  background-size: cover;
+		  background-position-x: 20vw;
+		  background-position-y: -10vh;
+		  background-repeat: no-repeat;
+		  line-height: 1.4;
+		}
+		
+		main {
+		  flex: 1;
+		  width: 100%;
+		}
+		
+		a {
+		  color: var(--text-color-footer);
+		  /*color: #65638f;*/
+		  text-decoration: none;
+		}
+		a:hover {
+		  color: var(--text-color-link-hover);
+		}
+		
+		.button {
+		  display: flex;
+		  background: linear-gradient(65deg, #DA552F, #ea8e39);
+		  font-family: "Heebo", sans-serif;
+		  color: #fff;
+		  display: inline-flex;
+		  font-size: var(--font-xxs);
+		  letter-spacing: 0px;
+		  font-weight: 700;
+		  line-height: 16px;
+		  text-transform: uppercase;
+		  text-decoration: none !important;
+		  border: none;
+		  border-radius: 2px;
+		  cursor: pointer;
+		  justify-content: center;
+		  padding: 16px 32px;
+		  text-align: center;
+		  white-space: nowrap;
+		  box-shadow: 0 8px 24px rgba(32, 43, 54, 0.12);
+		  mix-blend-mode: multiply;
+		  transition: all 0.15s ease;
+		}
+		.button:hover {
+		  color: #fff;
+		  box-shadow: 0 8px 24px rgba(32, 43, 54, 0.25);
+		}
+		.button--link {
+		  background: rgba(0, 0, 0, 0);
+		  color: #5A51FE;
+		  box-shadow: none;
+		}
+		.button--link:hover {
+		  color: #8751FE;
+		  box-shadow: none;
+		}
+		
+		.accent {
+		  color: #5A51FE;
+		}
+		
+		.container {
+		  max-width: 960px;
+		  padding: 0 30px;
+		  margin: auto;
+		}
+		
+		h1, h2 {
+		  font-family: "Heebo", sans-serif;
+		}
+		
+		.container-desktop {
+		  max-width: 960px;
+		  padding: 0 30px;
+		  margin: auto;
+		}
+		@media (max-width: 768px) {
+		  .container-desktop {
+		    max-width: 100%;
+		    padding: 0;
+		  }
+		}
+		
+		@media (prefers-color-scheme: dark) {
+		  html {
+		    --background-color: var(--background-dark);
+		    --text-color: var(--text-dark);
+		    --background-image: var(--background-image-dark);
+		    --contrast-background-color: var(--background-light);
+		    --text-color-footer: var(--text-color-footer-dark);
+		    --text-color-link-hover: var(--text-color-link-hover-dark)  
+		  }
+		}
+		
+		.tobi-zoom__icon {
+		  display: none;
+		}
+		
+		.app__header {
+		  display: flex;
+		  flex-direction: row;
+		  margin-top: 128px;
+		  margin-bottom: 128px;
+		  align-items: center;
+		}
+		@media (max-width: 768px) {
+		  .app__header {
+		    align-items: flex-start;
+		    margin-top: 32px;
+		    margin-bottom: 16px;
+		  }
+		}
+		.app__logo-wrapper {
+		  display: inline-block;
+		  background-size: contain;
+		  max-width: 250px;
+		  max-height: 250px;
+		  padding: 1px;
+		  margin-right: 64px;
+		  width: 100%;
+		  height: 100%;
+		  background-repeat: no-repeat;
+		}
+		html[dir=rtl] .app__logo-wrapper {
+		  margin-left: 64px;
+		  margin-right: 0;
+		}
+		@media (max-width: 768px) {
+		  .app__logo-wrapper {
+		    max-width: 100px;
+		    max-height: 100px;
+		    margin-right: 16px;
+		  }
+		}
+		.app__logo {
+		  border-radius: 22.5%;
+		  mask-size: cover;
+		  width: 100%;
+		  height: auto;
+		}
+		.app__name {
+		  font-size: var(--font-xl);
+		  margin: 0;
+		}
+		.app__description {
+		  font-size: var(--font-lg);
+		}
+		@media (max-width: 768px) {
+		  .app__description {
+		    margin-top: 8px;
+		    margin-bottom: 0;
+		  }
+		}
+		.app__screenshot-a{
+		  text-align:center;
+		}
+		.app__screenshots-list {
+		  display: grid;
+		  grid-template-columns: repeat(6, var(--screenshot-width));
+		  grid-column-gap: 15px;
+		  padding: 30px 0;
+		  
+		}
+		@media (max-width: 768px) {
+		  .app__screenshots-list {
+		    padding: 32px;
+		  }
+		}
+		.app__screenshot {
+		  max-width:var(--screenshot-width);
+		  height:var(--screenshot-height);
+		  object-fit:contain;
+		  border-radius: 16px;
+		  /*box-shadow: 0 12px 48px rgba(17, 16, 62, 0.12);*/
+		  transition: all 0.3s ease-in-out;
+		  transform: scale(1);
+		  cursor: pointer;
+		}
+		.app__screenshot:hover {
+		  /*box-shadow: 0 24px 48px rgba(17, 16, 62, 0.12);*/
+		  transform: scale(1.05);
+		}
+		.app__screenshots-wrapper {
+		  overflow-y: auto;
+		}
+		.app__feature-container {
+		margin:auto;
+		}
+		.app__feature-wrapper{
+		  display: flex;
+		  justify-content: center;
+		  width: 100%;
+		}
+		.app__feature {
+		  width: 100%;
+		  border-radius: 16px;
+		  transition: all 0.3s ease-in-out;
+		  transform: scale(1);
+		}
+		@media (max-width: 768px) {
+		  .app__feature {
+		    width: 80%;
+		  }
+		}
+		
+		.app__buttons {
+		  display: flex;
+		  flex-direction: row;
+		  align-items: center;
+		  margin-left: -9.8px;
+		}
+		.app__buttons--mobile {
+		  display: none;
+		}
+		@media (max-width: 768px) {
+		  .app__buttons {
+		    margin-left: 0;
+		    margin-bottom: 64px;
+		  }
+		  .app__buttons--mobile {
+		    display: flex;
+		    justify-content: center;
+		  }
+		  .app__buttons--desktop {
+		    display: none;
+		  }
+		}
+		.app__button-play img {
+		  width: 176.4px;
+		}
+		.app__button-ios img {
+		  width: 140px;
+		}
+		.app__button-web {
+		  margin-left: 12px;
+		}
+		.app__button-web img {
+		  width: 157px;
+		}
+		@media (max-width: 768px) {
+		  .app__button-play img {
+		    width: 126px;
+		  }
+		  .app__button-ios img {
+		    width: 100px;
+		  }
+		  .app__button-web {
+		    margin-left: 8px;
+		  }
+		  .app__button-web img {
+		    width: 112px;
+		  }
+		}
+		.app__section-title {
+		  font-size: var(--font-lg);
+		}
+		.app__section {
+		  margin-bottom: 128px;
+		}
+		@media (max-width: 768px) {
+		  .app__section {
+		    margin-bottom: 64px;
+		  }
+		}
+		.app__featured-content {
+		  display: grid;
+		  grid-template-columns: 1fr 1fr 1fr 1fr;
+		  grid-column-gap: 32px;
+		  align-items: center;
+		}
+		@media (max-width: 768px) {
+		  .app__featured-content {
+		    display: block;
+		    padding: 32px;
+		  }
+		}
+		.app__featured-image {
+		  width: 100%;
+		  margin: auto;
+		}
+		
+		.footer {
+		  padding: 16px 0;
+		  font-size: var(--font-xs) !important;
+		}
+		.footer a {
+		  font-size: var(--font-xs) !important;
+		}
+		.footer__container {
+		  color: var(--text-color-footer);
+		  display: flex;
+		  width: 100%;
+		  justify-content: space-between;
+		  align-items: center;
+		}
+		@media (max-width: 768px) {
+		  .footer__container {
+		    flex-direction: column-reverse;
+		    align-items: flex-start;
+		  }
+		}
+		.footer__links {
+		  list-style: none;
+		  display: flex;
+		  padding-left: 0;
+		}
+		.footer__link {
+		  margin-left: 32px;
+		}
+		@media (max-width: 768px) {
+		  .footer__link {
+		    margin-left: 0;
+		    margin-right: 8px;
+		  }
+		}
+		
+		.page {
+		  max-width: 960px;
+		  padding: 0 30px;
+		  margin: auto;
+		}
+		
+		.bulb {
+		  font-size: 1.5rem;
+		  background-color: rgba(0, 0, 0, 0.7);
+		  border-radius: 0.75em;
+		  /* box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.3) inset; */
+		  color: #fdea7b;
+		  display: inline-flex;
+		  align-items: center;
+		  margin: auto;
+		  padding: 0.15em;
+		  width: 3em;
+		  height: 1.5em;
+		  transition: background-color 0.1s 0.3s ease-out, box-shadow 0.1s 0.3s ease-out;
+		  -webkit-appearance: none;
+		  -moz-appearance: none;
+		  appearance: none;
+		  z-index: 99;
+		  position:fixed;
+		  top: 2rem;
+		  right: 1rem;
+		}
+		
+		.bulb::before, .bulb:after {
+		  box-sizing: border-box;
+		  content: "";
+		  display: block;
+		}
+		
+		.bulb::before {
+		  background-color: #d7d7d7;
+		  border-radius: 50%;
+		  width: 1.2em;
+		  height: 1.2em;
+		  transition: background-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+		  z-index: 100;
+		}
+		
+		.bulb::after {
+		  background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.15) 0) 0 50% / 50% 100%, repeating-linear-gradient(90deg, #bbb 0, #bbb, #bbb 20%, #999 20%, #999 40%) 0 50% / 50% 100%, radial-gradient(circle at 50% 50%, #888 25%, transparent 26%);
+		  background-repeat: no-repeat;
+		  border: 0.25em solid transparent;
+		  border-left: 0.4em solid #d8d8d8;
+		  border-right: 0 solid transparent;
+		  transition: border-left-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+		  transform: translateX(-22.5%);
+		  transform-origin: 25% 50%;
+		  width: 1.2em;
+		  height: 1em;
+		}
+		
+		/* Checked */
+		.bulb:checked {
+		  background-color: rgba(0, 0, 0, 0.45);
+		  /* box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.1) inset; */
+		}
+		
+		.bulb:checked::before {
+		  background-color: currentColor;
+		  transform: translateX(125%)
+		}
+		
+		.bulb:checked::after {
+		  border-left-color: currentColor;
+		  transform: translateX(-2.5%) rotateY(180deg);
+		}	</style>
+	<link rel="stylesheet" href="assets/tobi.css" />
+		<style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300&display=swap');
+
+/*
+body {
+  background: linear-gradient(to right bottom, #9253bd, #16c2bf) fixed;
+}
+*/
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  /*color: white;*/
+}
+
+.app__buttons {
+  margin-left: 0px;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.app__logo-wrapper {
+  background-image: none;
+}
+</style>
+</head>
+	<body>
+		<main>
+<article class="page">
+	<header class="page__header">
+		<h1 class="page__title">Privacy</h1>
+	</header>
+	<div class="page__content">
+		<p><strong>Privacy Policy</strong></p>
+<p>Lyrcs built the Lyrcs app as a Free app. This SERVICE is provided by Lyrcs at no cost and is intended for use as is.</p>
+<p>This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.</p>
+<p>If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
+<p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at Lyrcs unless otherwise defined in this Privacy Policy.</p>
+<p><strong>Information Collection and Use</strong></p>
+<p>For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information. The information that we request will be retained by us and used as described in this privacy policy.</p>
+<p>The app does use third-party services that may collect information used to identify you.</p>
+<p>Link to the privacy policy of third-party service providers used by the app</p>
+<ul>
+<li>  <a href="https://firebase.google.com/policies/analytics">Google Analytics for Firebase</a></li>
+<li>  <a href="https://firebase.google.com/support/privacy/">Firebase Crashlytics</a></li>
+</ul>
+<p><strong>Log Data</strong></p>
+<p>We want to inform you that whenever you use our Service, in a case of an error in the app we collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
+<p><strong>Cookies</strong></p>
+<p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device&#39;s internal memory.</p>
+<p>This Service does not use these “cookies” explicitly. However, the app may use third-party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.</p>
+<p><strong>Service Providers</strong></p>
+<p>We may employ third-party companies and individuals due to the following reasons:</p>
+<ul>
+<li>  To facilitate our Service;</li>
+<li>  To provide the Service on our behalf;</li>
+<li>  To perform Service-related services; or</li>
+<li>  To assist us in analyzing how our Service is used.</li>
+</ul>
+<p>We want to inform users of this Service that these third parties have access to their Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
+<p><strong>Security</strong></p>
+<p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+<p><strong>Links to Other Sites</strong></p>
+<p>This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+<p><strong>Children’s Privacy</strong></p>
+<p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13 years of age. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do the necessary actions.</p>
+<p><strong>Changes to This Privacy Policy</strong></p>
+<p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+<p>This policy is effective as of 2021-12-23</p>
+<p><strong>Contact Us</strong></p>
+<p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a href="mailto:&#x68;&#105;&#64;&#108;&#121;&#114;&#99;&#115;&#46;&#97;&#x70;&#112;">&#x68;&#105;&#64;&#108;&#121;&#114;&#99;&#115;&#46;&#97;&#x70;&#112;</a>.</p>
+
+	</div>
+</article>
+
+
+
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__container">
+					<p class="footer__love">
+						<script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2021</noscript> Lyrcs. All rights reserved
+					</p>
+					<ul class="footer__links">
+							<li class="footer__link">
+								<a href="privacy.html">Privacy</a>
+							</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="assets/tobi.min.js" /></script>
+		<script>
+			window.onload = function () {
+				var tobi = new Tobi();
+			};
+		</script>
+  </body>
+</html>
