@@ -17,7 +17,9 @@
 	{{/if}}
 
 	<script src="https://cdn.tailwindcss.com"></script>
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet"> 
 
 	<style>
 		.gradient {
@@ -33,9 +35,9 @@
 	<div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
 			
 		<div class="pl-4 flex items-center mr-1">
-			<a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+			<a class="toggleColour text-white no-underline hover:no-underline font-['Pacifico'] text-2xl lg:text-2xl" href="#">
 				<img src="{{{$image COMMON.GENERAL.SITE_LOGO}}}" class="h-10 fill-current inline" alt="" />
-				{{COMMON.GENERAL.SITE_NAME}}
+				<span class="pt-1 inline-block absolute pl-2">{{COMMON.GENERAL.SITE_NAME}}</span>
 			</a>
 		</div>
 
@@ -312,14 +314,14 @@
 
 
 <!--Footer-->
-<footer class="bg-white">
+<!-- <footer class="bg-white">
 	<div class="container mx-auto  px-8">
 
         <div class="w-full flex flex-col md:flex-row py-6">
 
 			<div class="flex-1 mb-6">
 			
-				<a class="no-underline hover:no-underline font-bold text-2xl lg:text-4xl" style="color: {{COMMON.THEME.COLOR_A}}" href="#"> 
+				<a class="no-underline hover:no-underline font-['Pacifico'] text-2xl lg:text-2xl" style="color: {{COMMON.THEME.COLOR_A}}" href="#"> 
 					<img src="{{{$image COMMON.GENERAL.SITE_LOGO}}}" class="h-8 mr-1 fill-current inline" alt="" />
 					{{COMMON.GENERAL.SITE_NAME}}
 				</a>
@@ -346,7 +348,7 @@
         </div>
     </div>
 
-</footer>
+</footer> -->
 
 {{{$script 'assets/script.js'}}}
 
