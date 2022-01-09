@@ -1,141 +1,124 @@
 {
     "meta": {
-        "name": "App Landing Page With Steroids",
+        "name": "Tailwind Landing Page",
         "version": 1,
         "filePaths": [
             "data.json",
-            "content/markdown/text-2qktkbfolbuelmqg.md",
-            "content/markdown/content-2ifyyf058pb78.md",
-            "content/html/8874iqka3r4oe5ftfvqmru.h",
-            "assets/ios-badge.svg",
-            "assets/pwa-badge.png",
-            "assets/producthunt.png",
-            "assets/light-background.svg",
-            "assets/dark-background.svg",
-            "assets/og-image.png",
-            "content/image/h1w4srv37a2ysu6inwwa.svg",
-            "content/image/xlp4hr32gum52c78p8q0.png",
-            "content/image/vlxzy6cqutugjiqapf6o.svg",
-            "content/image/4fjune8kixwrb28haf0u.png",
-            "content/image/wme4to0nxuk65tdfnrys.svg",
-            "content/image/xg6xwuc3w7jkwrh0xops.svg",
-            "content/image/0eeipmmlme0j6us6kctr.svg",
-            "content/image/s38txsl7yqbcg5lc4fv3.svg",
-            "content/image/hgugeviwvlp8i31z6dgi.svg"
+            "content/markdown/descript-qeq118iqx5kl.md",
+            "content/markdown/descript-06ah7yx7yyux.md",
+            "content/markdown/descript-insjqao62fke.md",
+            "content/markdown/descript-cvvwm16jkxh5.md",
+            "content/image/dbia68xyaqho0lknnp6j.svg",
+            "content/image/axvwlcpz3l5ycn5xxtaz.png",
+            "content/image/4xqs0nyljmlvqvwsmcp7.png",
+            "content/image/sa8nlp05qxjx2mvfyhca.png",
+            "content/image/re4kyzuxs6jxz1m80sam.png",
+            "content/image/px7p363nf081q0eqskpv.svg",
+            "content/image/zphvpkjpmgiu4uec1qij.png",
+            "content/image/aaaa.svg"
         ]
     },
     "configuration": {
         "pagePathStrategy": "absolute",
-        "baseUrl": null
+        "baseUrl": "https://lyrcs.app/"
     },
     "data": {
-        "APP": {
-            "APP": {
-                "APP_NAME": "Lyrcs",
-                "TAGLINE": "The lyric writing toolkit.",
-                "ICON": "content/image/vlxzy6cqutugjiqapf6o.svg",
-                "SHOW_FEATURE": true,
-                "FEATURE_TITLE": null,
-                "FEAUTE_GRAPHIC": "content/image/xlp4hr32gum52c78p8q0.png",
-                "FEATURE_GRAPHIC_DARKMODE": "content/image/4fjune8kixwrb28haf0u.png",
-                "GOOGLE_PLAY_IMAGE": "content/image/h1w4srv37a2ysu6inwwa.svg",
-                "GOOGLE_PLAY_URL": "asd",
-                "GOOGLE_PLAY_TITLE": "Mac App Store Link",
-                "IOS_IMAGE": "assets/ios-badge.svg",
-                "IOS_URL": null,
-                "IOS_TITLE": "Get on Appstore",
-                "WEB_APP_IMAGE": "assets/pwa-badge.png",
-                "WEB_APP_URL": null,
-                "WEB_APP_TITLE": " "
-            },
-            "SCREENSHOTS": {
-                "SHOW": true,
-                "TITLE": "Screenshots",
-                "INCLUDE_LANDSCAPE": true,
-                "IMAGES": [
+        "LANDING": {
+            "TOP": {
+                "PRE_TITLE": null,
+                "TITLE": "The lyric writing toolkit.",
+                "POST_TITLE": "Made by songwriters, for songwriters.",
+                "IMAGE": "content/image/axvwlcpz3l5ycn5xxtaz.png",
+                "ACTIONS": [
                     {
-                        "IMAGE": "content/image/xg6xwuc3w7jkwrh0xops.svg"
-                    },
-                    {
-                        "IMAGE": "content/image/wme4to0nxuk65tdfnrys.svg"
-                    },
-                    {
-                        "IMAGE": "content/image/s38txsl7yqbcg5lc4fv3.svg"
-                    },
-                    {
-                        "IMAGE": "content/image/0eeipmmlme0j6us6kctr.svg"
+                        "TITLE": "Download",
+                        "IMAGE": "content/image/aaaa.svg",
+                        "IMAGE_ALT": "Download lyrcs from mac app store",
+                        "URL": "https://apps.apple.com/ae/app/lyrcs/id1599888045?mt=12",
+                        "OPEN_IN_NEW_WINDOW": true
                     }
                 ]
             },
-            "DESCRIPTION": {
+            "LINES": {
                 "SHOW": true,
-                "TITLE": "Description",
-                "TEXT": "content/markdown/text-2qktkbfolbuelmqg.md"
+                "TITLE": "Features You'll Love",
+                "LINES": [
+                    {
+                        "TITLE": "Instant Syllable Counting",
+                        "DESCRIPTION": "content/markdown/descript-insjqao62fke.md",
+                        "DIRECTION": "left",
+                        "IMAGE": "content/image/4xqs0nyljmlvqvwsmcp7.png"
+                    },
+                    {
+                        "TITLE": "Beautiful Design",
+                        "DESCRIPTION": "content/markdown/descript-qeq118iqx5kl.md",
+                        "DIRECTION": "right",
+                        "IMAGE": "content/image/sa8nlp05qxjx2mvfyhca.png"
+                    },
+                    {
+                        "TITLE": "Native macOS Integration",
+                        "DESCRIPTION": "content/markdown/descript-cvvwm16jkxh5.md",
+                        "DIRECTION": "left",
+                        "IMAGE": "content/image/re4kyzuxs6jxz1m80sam.png"
+                    }
+                ]
             },
-            "FEATURED_IN": {
+            "COLUMNS": {
+                "SHOW": true,
+                "TITLE": "Upcoming",
+                "COLUMNS": [
+                    {
+                        "SUBTITLE": "Feature",
+                        "TITLE": "Rhyme Dictionary",
+                        "DESCRIPTION": "content/markdown/descript-06ah7yx7yyux.md",
+                        "ACTION_TITLE": "Action",
+                        "ACTION_URL": null,
+                        "OPEN_IN_NEW_WINDOW": true
+                    }
+                ]
+            },
+            "PRICING": {
                 "SHOW": false,
-                "TITLE": "Featured in",
-                "FEATURES": [
-                    {
-                        "IMAGE": "assets/producthunt.png",
-                        "URL": "https://github.com/"
-                    },
-                    {
-                        "IMAGE": "assets/producthunt.png",
-                        "URL": "https://github.com/"
-                    }
-                ]
+                "TITLE": "Pricing",
+                "PRICES": []
+            },
+            "CALL_TO_ACTION": {
+                "SHOW": true,
+                "TITLE": "How much does all this cost?",
+                "SUBTITLE": "0, zip, null, it's free ❤️",
+                "ACTION_TITLE": " ",
+                "ACTION_URL": null,
+                "OPEN_IN_NEW_WINDOW": true,
+                "SHOW_TOP_ACTIONS": true
             }
         },
-        "PAGES": {
-            "PAGES": {
-                "PAGES": [
-                    {
-                        "TITLE": "Privacy",
-                        "FILE_NAME": "privacy",
-                        "CONTENT": "content/markdown/content-2ifyyf058pb78.md"
-                    }
-                ]
+        "LINKS": {
+            "LINKS": {
+                "LINKS": []
             }
         },
         "COMMON": {
             "THEME": {
-                "TOOGLE_THEME": false,
-                "DEFAULT_MODE": true
+                "COLOR_A": "#9253bd",
+                "COLOR_B": "#16c2bf"
             },
-            "LIGHT_THEME": {
-                "BACKGROUND_COLOR": "#ffffff",
-                "BACKGROUND_IMAGE": "assets/light-background.svg",
-                "TEXT_COLOR": "#000000",
-                "FOOTER_TEXT_COLOR": "#8a8a8a",
-                "LINK_HOVER_TEXT_COLOR": "#454545"
-            },
-            "DARK_THEME": {
-                "BACKGROUND_COLOR": "#121212",
-                "BACKGROUND_IMAGE": "assets/dark-background.svg",
-                "TEXT_COLOR": "#ffffff",
-                "FOOTER_TEXT_COLOR": "#8a8a8a",
-                "LINK_HOVER_TEXT_COLOR": "#454545"
+            "GENERAL": {
+                "SITE_NAME": "Lyrcs",
+                "SITE_LOGO": "content/image/dbia68xyaqho0lknnp6j.svg"
             },
             "META": {
-                "AUTHOR": null,
                 "LANGUAGE": "en",
                 "DIRECTION": "auto",
-                "TITLE": "Lyrcs App",
+                "TITLE": "Lyrcs Mac App",
                 "DESCRIPTION": "The lyric writing toolkit.",
-                "KEYWORDS": "lyrics,app,mac,songwriting,syllables",
-                "FAVICON": "content/image/hgugeviwvlp8i31z6dgi.svg",
-                "OG_IMAGE": "assets/og-image.png",
-                "PRE_HTML": "content/html/8874iqka3r4oe5ftfvqmru.h",
-                "ROBOTS_INDEX": true,
-                "ROBOTS_LINKS": false
+                "FAVICON": "content/image/px7p363nf081q0eqskpv.svg",
+                "OG_IMAGE": "content/image/zphvpkjpmgiu4uec1qij.png",
+                "PRE_HTML": null
             },
             "FOOTER": {
-                "COPYRIGHT": "Lyrcs. All rights reserved",
-                "TEMPLATE_BY": false,
+                "COPYRIGHT": "All rights reserved",
                 "POWERED_BY": false,
-                "POST_HTML": null,
-                "LINKS": []
+                "POST_HTML": null
             }
         }
     }
