@@ -1,585 +1,226 @@
 <!DOCTYPE html>
-<html dir="auto" lang="en" >
+<html dir="auto" lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Lyrcs App</title>
+	<title>Lyrcs Mac App</title>
 
 	<meta name="description" content="The lyric writing toolkit." />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="icon" href="content/image/hgugeviwvlp8i31z6dgi.svg" />
+	<link rel="icon" href="https://lyrcs.app/content/image/px7p363nf081q0eqskpv.svg" />
 
-	<meta property="og:title" content="Lyrcs App" />
+	<meta property="og:title" content="Lyrcs Mac App" />
 	<meta property="og:description" content="The lyric writing toolkit." />
-	<meta property="og:image" content="assets/og-image.png" />
-	<meta name="keywords" content="lyrics,app,mac,songwriting,syllables"/>
-	<meta name="robots" content="index,nofollow" />
+	<meta property="og:image" content="https://lyrcs.app/content/image/zphvpkjpmgiu4uec1qij.png" />
+
+
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+
 	<style>
-		:root {
-		  --font-xl: 42px;
-		  --font-lg: 24px;
-		  --font-md: 20px;
-		  --font-sm: 18px;
-		  --font-xs: 16px;
-		  --font-xxs: 14px;
-		
-		  --screenshot-width: 500px;
-		  --screenshot-height: 300px;
-		  /* Light */
-		  --background-light: #ffffff;
-		  --background-image-light: url(assets/light-background.svg);
-		  --text-light: #000000;
-		  --text-color-footer-light: #8a8a8a;
-		  --text-color-link-hover-light: #454545;
-		  
-		  /* Dark */
-		  --background-dark: #121212;
-		  --background-image-dark: url(assets/dark-background.svg);
-		  --text-dark: #ffffff;
-		  --text-color-footer-dark: #8a8a8a;
-		  --text-color-link-hover-dark: #454545;
+		.gradient {
+			background: linear-gradient(90deg, #9253bd 0%, #16c2bf 100%);
 		}
-		@media (max-width: 768px) {
-		  :root {
-		    --font-xl: 18px;
-		    --font-lg: 16px;
-		    --font-md: 14px;
-		    --font-sm: 12px;
-		    --font-xs: 12px;
-		    --font-xxs: 12px;
-		
-		    --screenshot-width: 250px;
-		    --screenshot-height: 300px;
-		  }
-		}
-		
-		/* Default */
-		html {
-		  --background-color: var(--background-light);
-		  --text-color: var(--text-light);
-		  --background-image: var(--background-image-light);
-		  --contrast-background-color: var(--background-dark);
-		  --text-color-footer: var(--text-color-footer-light);
-		  --text-color-link-hover: var(--text-color-link-hover-light)
-		}
-		
-		body {
-		  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-		  color: var(--text-color);
-		  display: flex;
-		  min-height: 100vh;
-		  flex-direction: column;
-		  font-size: var(--font-md);
-		  background-color: var(--background-color);
-		  background-image: var(--background-image);
-		  background-size: cover;
-		  background-position-x: 20vw;
-		  background-position-y: -10vh;
-		  background-repeat: no-repeat;
-		  line-height: 1.4;
-		}
-		
-		main {
-		  flex: 1;
-		  width: 100%;
-		}
-		
-		a {
-		  color: var(--text-color-footer);
-		  /*color: #65638f;*/
-		  text-decoration: none;
-		}
-		a:hover {
-		  color: var(--text-color-link-hover);
-		}
-		
-		.button {
-		  display: flex;
-		  background: linear-gradient(65deg, #DA552F, #ea8e39);
-		  font-family: "Heebo", sans-serif;
-		  color: #fff;
-		  display: inline-flex;
-		  font-size: var(--font-xxs);
-		  letter-spacing: 0px;
-		  font-weight: 700;
-		  line-height: 16px;
-		  text-transform: uppercase;
-		  text-decoration: none !important;
-		  border: none;
-		  border-radius: 2px;
-		  cursor: pointer;
-		  justify-content: center;
-		  padding: 16px 32px;
-		  text-align: center;
-		  white-space: nowrap;
-		  box-shadow: 0 8px 24px rgba(32, 43, 54, 0.12);
-		  mix-blend-mode: multiply;
-		  transition: all 0.15s ease;
-		}
-		.button:hover {
-		  color: #fff;
-		  box-shadow: 0 8px 24px rgba(32, 43, 54, 0.25);
-		}
-		.button--link {
-		  background: rgba(0, 0, 0, 0);
-		  color: #5A51FE;
-		  box-shadow: none;
-		}
-		.button--link:hover {
-		  color: #8751FE;
-		  box-shadow: none;
-		}
-		
-		.accent {
-		  color: #5A51FE;
-		}
-		
-		.container {
-		  max-width: 960px;
-		  padding: 0 30px;
-		  margin: auto;
-		}
-		
-		h1, h2 {
-		  font-family: "Heebo", sans-serif;
-		}
-		
-		.container-desktop {
-		  max-width: 960px;
-		  padding: 0 30px;
-		  margin: auto;
-		}
-		@media (max-width: 768px) {
-		  .container-desktop {
-		    max-width: 100%;
-		    padding: 0;
-		  }
-		}
-		
-		@media (prefers-color-scheme: dark) {
-		  html {
-		    --background-color: var(--background-dark);
-		    --text-color: var(--text-dark);
-		    --background-image: var(--background-image-dark);
-		    --contrast-background-color: var(--background-light);
-		    --text-color-footer: var(--text-color-footer-dark);
-		    --text-color-link-hover: var(--text-color-link-hover-dark)  
-		  }
-		}
-		
-		.tobi-zoom__icon {
-		  display: none;
-		}
-		
-		.app__header {
-		  display: flex;
-		  flex-direction: row;
-		  margin-top: 128px;
-		  margin-bottom: 128px;
-		  align-items: center;
-		}
-		@media (max-width: 768px) {
-		  .app__header {
-		    align-items: flex-start;
-		    margin-top: 32px;
-		    margin-bottom: 16px;
-		  }
-		}
-		.app__logo-wrapper {
-		  display: inline-block;
-		  background-size: contain;
-		  max-width: 250px;
-		  max-height: 250px;
-		  padding: 1px;
-		  margin-right: 64px;
-		  width: 100%;
-		  height: 100%;
-		  background-repeat: no-repeat;
-		}
-		html[dir=rtl] .app__logo-wrapper {
-		  margin-left: 64px;
-		  margin-right: 0;
-		}
-		@media (max-width: 768px) {
-		  .app__logo-wrapper {
-		    max-width: 100px;
-		    max-height: 100px;
-		    margin-right: 16px;
-		  }
-		}
-		.app__logo {
-		  border-radius: 22.5%;
-		  mask-size: cover;
-		  width: 100%;
-		  height: auto;
-		}
-		.app__name {
-		  font-size: var(--font-xl);
-		  margin: 0;
-		}
-		.app__description {
-		  font-size: var(--font-lg);
-		}
-		@media (max-width: 768px) {
-		  .app__description {
-		    margin-top: 8px;
-		    margin-bottom: 0;
-		  }
-		}
-		.app__screenshot-a{
-		  text-align:center;
-		}
-		.app__screenshots-list {
-		  display: grid;
-		  grid-template-columns: repeat(6, var(--screenshot-width));
-		  grid-column-gap: 15px;
-		  padding: 30px 0;
-		  
-		}
-		@media (max-width: 768px) {
-		  .app__screenshots-list {
-		    padding: 32px;
-		  }
-		}
-		.app__screenshot {
-		  max-width:var(--screenshot-width);
-		  height:var(--screenshot-height);
-		  object-fit:contain;
-		  border-radius: 16px;
-		  /*box-shadow: 0 12px 48px rgba(17, 16, 62, 0.12);*/
-		  transition: all 0.3s ease-in-out;
-		  transform: scale(1);
-		  cursor: pointer;
-		}
-		.app__screenshot:hover {
-		  /*box-shadow: 0 24px 48px rgba(17, 16, 62, 0.12);*/
-		  transform: scale(1.05);
-		}
-		.app__screenshots-wrapper {
-		  overflow-y: auto;
-		}
-		.app__feature-container {
-		margin:auto;
-		}
-		.app__feature-wrapper{
-		  display: flex;
-		  justify-content: center;
-		  width: 100%;
-		}
-		.app__feature {
-		  width: 100%;
-		  border-radius: 16px;
-		  transition: all 0.3s ease-in-out;
-		  transform: scale(1);
-		}
-		@media (max-width: 768px) {
-		  .app__feature {
-		    width: 80%;
-		  }
-		}
-		
-		.app__buttons {
-		  display: flex;
-		  flex-direction: row;
-		  align-items: center;
-		  margin-left: -9.8px;
-		}
-		.app__buttons--mobile {
-		  display: none;
-		}
-		@media (max-width: 768px) {
-		  .app__buttons {
-		    margin-left: 0;
-		    margin-bottom: 64px;
-		  }
-		  .app__buttons--mobile {
-		    display: flex;
-		    justify-content: center;
-		  }
-		  .app__buttons--desktop {
-		    display: none;
-		  }
-		}
-		.app__button-play img {
-		  width: 176.4px;
-		}
-		.app__button-ios img {
-		  width: 140px;
-		}
-		.app__button-web {
-		  margin-left: 12px;
-		}
-		.app__button-web img {
-		  width: 157px;
-		}
-		@media (max-width: 768px) {
-		  .app__button-play img {
-		    width: 126px;
-		  }
-		  .app__button-ios img {
-		    width: 100px;
-		  }
-		  .app__button-web {
-		    margin-left: 8px;
-		  }
-		  .app__button-web img {
-		    width: 112px;
-		  }
-		}
-		.app__section-title {
-		  font-size: var(--font-lg);
-		}
-		.app__section {
-		  margin-bottom: 128px;
-		}
-		@media (max-width: 768px) {
-		  .app__section {
-		    margin-bottom: 64px;
-		  }
-		}
-		.app__featured-content {
-		  display: grid;
-		  grid-template-columns: 1fr 1fr 1fr 1fr;
-		  grid-column-gap: 32px;
-		  align-items: center;
-		}
-		@media (max-width: 768px) {
-		  .app__featured-content {
-		    display: block;
-		    padding: 32px;
-		  }
-		}
-		.app__featured-image {
-		  width: 100%;
-		  margin: auto;
-		}
-		
-		.footer {
-		  padding: 16px 0;
-		  font-size: var(--font-xs) !important;
-		}
-		.footer a {
-		  font-size: var(--font-xs) !important;
-		}
-		.footer__container {
-		  color: var(--text-color-footer);
-		  display: flex;
-		  width: 100%;
-		  justify-content: space-between;
-		  align-items: center;
-		}
-		@media (max-width: 768px) {
-		  .footer__container {
-		    flex-direction: column-reverse;
-		    align-items: flex-start;
-		  }
-		}
-		.footer__links {
-		  list-style: none;
-		  display: flex;
-		  padding-left: 0;
-		}
-		.footer__link {
-		  margin-left: 32px;
-		}
-		@media (max-width: 768px) {
-		  .footer__link {
-		    margin-left: 0;
-		    margin-right: 8px;
-		  }
-		}
-		
-		.page {
-		  max-width: 960px;
-		  padding: 0 30px;
-		  margin: auto;
-		}
-		
-		.bulb {
-		  font-size: 1.5rem;
-		  background-color: rgba(0, 0, 0, 0.7);
-		  border-radius: 0.75em;
-		  /* box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.3) inset; */
-		  color: #fdea7b;
-		  display: inline-flex;
-		  align-items: center;
-		  margin: auto;
-		  padding: 0.15em;
-		  width: 3em;
-		  height: 1.5em;
-		  transition: background-color 0.1s 0.3s ease-out, box-shadow 0.1s 0.3s ease-out;
-		  -webkit-appearance: none;
-		  -moz-appearance: none;
-		  appearance: none;
-		  z-index: 99;
-		  position:fixed;
-		  top: 2rem;
-		  right: 1rem;
-		}
-		
-		.bulb::before, .bulb:after {
-		  box-sizing: border-box;
-		  content: "";
-		  display: block;
-		}
-		
-		.bulb::before {
-		  background-color: #d7d7d7;
-		  border-radius: 50%;
-		  width: 1.2em;
-		  height: 1.2em;
-		  transition: background-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
-		  z-index: 100;
-		}
-		
-		.bulb::after {
-		  background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.15) 0) 0 50% / 50% 100%, repeating-linear-gradient(90deg, #bbb 0, #bbb, #bbb 20%, #999 20%, #999 40%) 0 50% / 50% 100%, radial-gradient(circle at 50% 50%, #888 25%, transparent 26%);
-		  background-repeat: no-repeat;
-		  border: 0.25em solid transparent;
-		  border-left: 0.4em solid #d8d8d8;
-		  border-right: 0 solid transparent;
-		  transition: border-left-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
-		  transform: translateX(-22.5%);
-		  transform-origin: 25% 50%;
-		  width: 1.2em;
-		  height: 1em;
-		}
-		
-		/* Checked */
-		.bulb:checked {
-		  background-color: rgba(0, 0, 0, 0.45);
-		  /* box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.1) inset; */
-		}
-		
-		.bulb:checked::before {
-		  background-color: currentColor;
-		  transform: translateX(125%)
-		}
-		
-		.bulb:checked::after {
-		  border-left-color: currentColor;
-		  transform: translateX(-2.5%) rotateY(180deg);
-		}	</style>
-	<link rel="stylesheet" href="assets/tobi.css" />
-		<style>
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300&display=swap');
-
-/*
-body {
-  background: linear-gradient(to right bottom, #9253bd, #16c2bf) fixed;
-}
-*/
-
-h1 {
-  font-family: 'Pacifico', cursive;
-  /*color: white;*/
-}
-
-.app__buttons {
-  margin-left: 0px;
-}
-
-p {
-  font-family: 'Roboto', sans-serif;
-}
-
-.app__logo-wrapper {
-  background-image: none;
-}
-</style>
+	</style>
 </head>
-	<body>
-		<main>
-<header class="app__header container">
-	<div class="app__logo-wrapper"> <img class="app__logo" src="content/image/vlxzy6cqutugjiqapf6o.svg" alt="Lyrcs">
-	</div>
-	<div class="app__infos">
-		<h1 class="app__name">Lyrcs</h1>
-		<p class="app__description">The lyric writing toolkit.</p>
-		<div class="app__buttons app__buttons--desktop">
-			<a href="asd" class="app__button-play" target="_blank"
-				title="Mac App Store Link">
-				<img src="content/image/h1w4srv37a2ysu6inwwa.svg" alt="Mac App Store Link">
+<body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+
+<!--Nav-->
+<nav id="header" class="fixed w-full z-30 top-0 text-white">
+
+	<div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+			
+		<div class="pl-4 flex items-center mr-1">
+			<a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+				<img src="https://lyrcs.app/content/image/dbia68xyaqho0lknnp6j.svg" class="h-10 fill-current inline" alt="" />
+				Lyrcs
 			</a>
 		</div>
-	</div>
-</header>
-<div class="app__buttons app__buttons--mobile container">
-	<a href="asd" class="app__button-play" target="_blank"
-		title="Mac App Store Link">
-		<img src="content/image/h1w4srv37a2ysu6inwwa.svg" alt="Mac App Store Link">
-	</a>
-</div>
-<section class="app__feature-container app__section">
-	<div class="container">
-		<h2 class="app__section-title"></h2>
-	</div>
-	<!-- <div class="app__feature-wrapper container"> -->
-		<!-- <a href="{z{z$image APP.APP.FEAUTE_GRAPHICz}z}" class="lightbox"> -->
-		<!-- <img src="{z{z$image APP.APP.FEAUTE_GRAPHICz}z}" class="app__feature" alt="" /> -->
-		<!-- </a> -->
-	<!-- </div> -->
-	<div class="app__feature-wrapper container">
-		<picture>
-		    <source srcset="content/image/4fjune8kixwrb28haf0u.png" media="(prefers-color-scheme: dark)" class="app__feature" alt="">
-		    <img src="content/image/xlp4hr32gum52c78p8q0.png" class="app__feature" alt=""/> 
-		</picture>
-	</div>
-</section>
-<section class="app__screenshots app__section">
-	<div class="container">
-		<h2 class="app__section-title">Screenshots</h2>
-	</div>
-	<div class="app__screenshots-wrapper container-desktop">
-		<div class="app__screenshots-list">
-			<a href="content/image/xg6xwuc3w7jkwrh0xops.svg" class="lightbox app__screenshot-a">
-				<img src="content/image/xg6xwuc3w7jkwrh0xops.svg" class="app__screenshot" alt="" />
-			</a>
-			<a href="content/image/wme4to0nxuk65tdfnrys.svg" class="lightbox app__screenshot-a">
-				<img src="content/image/wme4to0nxuk65tdfnrys.svg" class="app__screenshot" alt="" />
-			</a>
-			<a href="content/image/s38txsl7yqbcg5lc4fv3.svg" class="lightbox app__screenshot-a">
-				<img src="content/image/s38txsl7yqbcg5lc4fv3.svg" class="app__screenshot" alt="" />
-			</a>
-			<a href="content/image/0eeipmmlme0j6us6kctr.svg" class="lightbox app__screenshot-a">
-				<img src="content/image/0eeipmmlme0j6us6kctr.svg" class="app__screenshot" alt="" />
-			</a>
-		</div>
-	</div>
-</section>
-<section class="app__fulldescription app__section container">
-	<h2 class="app__section-title">Description</h2>
-	<div class="app__fulldescription-content">
-		<p>Lyrcs was made by songwriters, for songwriters.</p>
-<p>Lyrcs&#39; mission is to be a single tool that empowers you to do what you do best - tell stories through music. </p>
-<p>Here are the features it contains with more constantly in the works:</p>
-<p>SYLLABLE COUNTING<br>Have you ever needed to ensure a line in verse 2 matches the syllable count in verse 1? Gone are the days of manually counting on your fingers. Lyrcs provides instant syllable counting for every line in your lyrics.</p>
-<p>DARK MODE SUPPORT<br>Do you ever find your song writing process goes late into the night but a blinding white text editor ends your session early? You won&#39;t experience that problem with Lyrcs. Lyrcs detects that you have dark mode enabled on your system and switches to colors that are easy on the eye.</p>
-<p>DYNAMIC FONT SIZE<br>You may have written that great line but was it worth it if you spent the whole time squinting in pain? With Lyrcs that&#39;s a thing of the past. Just decrease/increase your font size using CMD,- or CMD,+ respectively.</p>
-<p>SPELL CHECKING<br>Ready to submit your Lyrics to the world wide web but worried you may have misspelled a word or two? Have Lyrcs do the hard work for you and immediately check for any spelling mistakes and suggest any corrections.</p>
+
 
 	</div>
-</section>
-		</main>
-		<footer class="footer">
-			<div class="container">
-				<div class="footer__container">
-					<p class="footer__love">
-						<script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2021</noscript> Lyrcs. All rights reserved
-					</p>
-					<ul class="footer__links">
-							<li class="footer__link">
-								<a href="privacy.html">Privacy</a>
-							</li>
-					</ul>
+	
+	<hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+</nav>
+
+<!--Hero-->
+<div class="pt-24">
+
+	<div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+		<!--Left Col-->
+		<div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left lg:pb-16 md:pb-16">
+			<p class="uppercase tracking-loose w-full"></p>
+			<h1 class="my-4 text-5xl font-bold leading-tight">The lyric writing toolkit.</h1>
+			<p class="leading-normal text-2xl mb-8">Made by songwriters, for songwriters.</p>
+
+			<div class="lg:pb-16 md:pb-16 w-full sm:text-center md:text-left lg:text-left">
+				<a href="https://apps.apple.com/ae/app/lyrcs/id1599888045?mt&#x3D;12" target="_blank" class="mr-2"><img class="inline-block" src="https://lyrcs.app/content/image/aaaa.svg", alt="Download lyrcs from mac app store"></a>
+			</div>
+
+		</div>
+		<!--Right Col-->
+		<div class="w-full md:w-3/5 py-6 text-center">
+			<img class="w-full md:w-4/5 z-50" src="https://lyrcs.app/content/image/axvwlcpz3l5ycn5xxtaz.png">
+		</div>
+		
+	</div>
+
+</div>
+
+<div class="relative -mt-12 lg:-mt-24">
+	<svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
+		<path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+		<path d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z" opacity="0.100000001"></path>
+		<path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" id="Path-4" opacity="0.200000003"></path>
+		</g>
+		<g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+		<path d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"></path>
+		</g>
+		</g>
+	</svg>
+</div>
+
+<section class="bg-white border-b py-8">
+	<div class="container max-w-5xl mx-auto m-8">
+		<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Features You&#x27;ll Love</h1>
+		<div class="w-full mb-4">	
+			<div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+		</div>
+
+			<div class="flex flex-wrap items-center">
+				<div class="w-5/6 sm:w-1/2 p-6">
+					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Instant Syllable Counting</h3>
+					<div class="text-gray-600 mb-8">
+						<p><strong>Gone are the days of manually counting on your fingers.</strong><br><br>
+✅ Syllable count per line<br>✅ Syllable count of selected text (right click)<br>✅ Override syllable count of words (right click or preferences)<br>✅ No internet required    </p>
+
+					</div>
+				</div>
+				<div class="w-full sm:w-1/2 p-6">
+					<img src="https://lyrcs.app/content/image/4xqs0nyljmlvqvwsmcp7.png" class="sm:h-full mx-auto" />
 				</div>
 			</div>
-		</footer>
+			<div class="flex flex-wrap flex-col-reverse sm:flex-row items-center">	
+				<div class="w-full sm:w-1/2 p-6 mt-6">
+					<img src="https://lyrcs.app/content/image/sa8nlp05qxjx2mvfyhca.png" class="sm:h-full mx-auto" />
+				</div>
+				<div class="w-full sm:w-1/2 p-6 mt-6">
+					<div class="align-middle">
+						<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Beautiful Design</h3>
+						<div class="text-gray-600 mb-8">
+							<p><strong>Working late at night? Eyesight isn&#39;t what it used to be? Wish you could work without distractions? We got you.</strong><br><br></p>
+<p>✅ Minimalistic UI<br>✅ Dark mode support<br>✅ Dark/light mode override (preferences)<br>✅ Adjustable Font (CMD +, CMD -)<br>✅ Tab support (CMD T)</p>
 
-		<script type="text/javascript" src="assets/tobi.min.js" /></script>
-		<script>
-			window.onload = function () {
-				var tobi = new Tobi();
-			};
-		</script>
-  </body>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex flex-wrap items-center">
+				<div class="w-5/6 sm:w-1/2 p-6">
+					<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Native macOS Integration</h3>
+					<div class="text-gray-600 mb-8">
+						<p><strong>Everything you come to expect from a great macOS app is included.</strong><br><br></p>
+<p>✅ Spelling and grammar checking (right click)<br>✅ Dictation (Edit &gt; Start Dictation)<br>✅ Share (File &gt; Share)<br>✅ Undo/Redo  </p>
+<p>and much more!  </p>
+
+					</div>
+				</div>
+				<div class="w-full sm:w-1/2 p-6">
+					<img src="https://lyrcs.app/content/image/re4kyzuxs6jxz1m80sam.png" class="sm:h-full mx-auto" />
+				</div>
+			</div>
+	</div>
+</section>
+
+<section class="bg-white border-b py-8">
+	<div class="container mx-auto flex flex-wrap pt-4 pb-12">
+
+		<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Upcoming</h1>
+		<div class="w-full mb-4">	
+			<div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+		</div>
+
+		<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+			<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+				<div class="flex flex-wrap pb-6 pt-2">
+					<p class="w-full text-gray-600 text-xs md:text-sm px-6">Feature</p>
+					<div class="w-full font-bold text-xl text-gray-800 px-6">Rhyme Dictionary</div>
+					<div class="text-gray-800 text-base px-6">
+						<p>Built in rhyme dictionary giving you instant rhymes as you type. No more pausing your workflow to open up rhymezone 😉.</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+			<g class="wave" fill="#f8fafc">
+				<path d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"></path>
+			</g>
+			<g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
+				<g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
+					<path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+					<path d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z" opacity="0.100000001"></path>
+					<path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" opacity="0.200000003"></path>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
+
+<section class="container mx-auto text-center py-6 mb-12">
+
+	<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">How much does all this cost?</h1>
+	<div class="w-full mb-4">	
+		<div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+	</div>
+
+	<h3 class="my-4 text-3xl leading-tight">0, zip, null, it&#x27;s free ❤️</h3>	
+
+	<div class="w-full sm:text-center">
+		<a href="https://apps.apple.com/ae/app/lyrcs/id1599888045?mt&#x3D;12" target="_blank" class="mr-2"><img class="inline-block" src="https://lyrcs.app/content/image/aaaa.svg", alt="Download lyrcs from mac app store"></a>
+	</div>
+
+		
+</section>
+
+
+<!--Footer-->
+<footer class="bg-white">
+	<div class="container mx-auto  px-8">
+
+        <div class="w-full flex flex-col md:flex-row py-6">
+
+			<div class="flex-1 mb-6">
+			
+				<a class="no-underline hover:no-underline font-bold text-2xl lg:text-4xl" style="color: #9253bd" href="#"> 
+					<img src="https://lyrcs.app/content/image/dbia68xyaqho0lknnp6j.svg" class="h-8 mr-1 fill-current inline" alt="" />
+					Lyrcs
+				</a>
+			</div>
+
+            <div class="flex-1 text-right">
+
+				<div class="mb-4">
+				</div>
+
+				<div class="text-gray-600">
+					<script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2022</noscript> All rights reserved
+				</div>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+<script type="text/javascript" src="https://lyrcs.app/assets/script.js" /></script>
+
+</body>
 </html>
