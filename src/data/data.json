@@ -8,14 +8,14 @@
             "content/markdown/descript-06ah7yx7yyux.md",
             "content/markdown/descript-insjqao62fke.md",
             "content/markdown/descript-cvvwm16jkxh5.md",
-            "content/image/dbia68xyaqho0lknnp6j.svg",
             "content/image/4xqs0nyljmlvqvwsmcp7.png",
             "content/image/sa8nlp05qxjx2mvfyhca.png",
             "content/image/re4kyzuxs6jxz1m80sam.png",
-            "content/image/px7p363nf081q0eqskpv.svg",
             "content/image/zphvpkjpmgiu4uec1qij.png",
             "content/image/aaaa.svg",
-            "content/image/bqi3lyubmepapwod6a13.png"
+            "content/image/bqi3lyubmepapwod6a13.png",
+            "content/image/cv8ai4y7vp71pjgkixhr.svg",
+            "content/image/62li35nuumq8aiv3f0u0.svg"
         ]
     },
     "configuration": {
@@ -104,14 +104,14 @@
             },
             "GENERAL": {
                 "SITE_NAME": "Lyrcs",
-                "SITE_LOGO": "content/image/dbia68xyaqho0lknnp6j.svg"
+                "SITE_LOGO": "content/image/cv8ai4y7vp71pjgkixhr.svg"
             },
             "META": {
                 "LANGUAGE": "en",
                 "DIRECTION": "auto",
                 "TITLE": "Lyrcs Mac App",
                 "DESCRIPTION": "The lyric writing toolkit.",
-                "FAVICON": "content/image/px7p363nf081q0eqskpv.svg",
+                "FAVICON": "content/image/62li35nuumq8aiv3f0u0.svg",
                 "OG_IMAGE": "content/image/zphvpkjpmgiu4uec1qij.png",
                 "PRE_HTML": null
             },
