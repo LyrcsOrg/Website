@@ -9,13 +9,13 @@
             "content/markdown/descript-insjqao62fke.md",
             "content/markdown/descript-cvvwm16jkxh5.md",
             "content/image/dbia68xyaqho0lknnp6j.svg",
-            "content/image/axvwlcpz3l5ycn5xxtaz.png",
             "content/image/4xqs0nyljmlvqvwsmcp7.png",
             "content/image/sa8nlp05qxjx2mvfyhca.png",
             "content/image/re4kyzuxs6jxz1m80sam.png",
             "content/image/px7p363nf081q0eqskpv.svg",
             "content/image/zphvpkjpmgiu4uec1qij.png",
-            "content/image/aaaa.svg"
+            "content/image/aaaa.svg",
+            "content/image/bqi3lyubmepapwod6a13.png"
         ]
     },
     "configuration": {
@@ -28,7 +28,7 @@
                 "PRE_TITLE": null,
                 "TITLE": "The lyric writing toolkit.",
                 "POST_TITLE": "Made by songwriters, for songwriters.",
-                "IMAGE": "content/image/axvwlcpz3l5ycn5xxtaz.png",
+                "IMAGE": "content/image/bqi3lyubmepapwod6a13.png",
                 "ACTIONS": [
                     {
                         "TITLE": "Download",
