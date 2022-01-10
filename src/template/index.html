@@ -83,7 +83,7 @@
 			{{#if LANDING.TOP.ACTIONS}}
 			<div class="lg:pb-16 md:pb-16 w-full sm:text-center md:text-left lg:text-left">
 			{{#each LANDING.TOP.ACTIONS}}
-				<a href="{{URL}}"{{#if OPEN_IN_NEW_WINDOW}} target="_blank"{{/if}} class="mr-2"><img class="inline-block" src="{{{$image IMAGE}}}", alt="{{IMAGE_ALT}}"></a>
+				<a href="{{URL}}"{{#if OPEN_IN_NEW_WINDOW}} target="_blank"{{/if}} class="mr-2"><img class="inline-block h-14" src="{{{$image IMAGE}}}", alt="{{IMAGE_ALT}}"></a>
 			{{/each}}
 			</div>
 			{{/if}}
@@ -114,7 +114,7 @@
 </div>
 
 {{#if LANDING.LINES.SHOW}}
-<section class="bg-white border-b py-8">
+<section class="bg-white py-8">
 	<div class="container max-w-5xl mx-auto m-8">
 		<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">{{LANDING.LINES.TITLE}}</h1>
 		<div class="w-full mb-4">	
@@ -296,7 +296,7 @@
 	{{#if LANDING.CALL_TO_ACTION.SHOW_TOP_ACTIONS}}
 	<div class="w-full sm:text-center">
 	{{#each LANDING.TOP.ACTIONS}}
-		<a href="{{URL}}"{{#if OPEN_IN_NEW_WINDOW}} target="_blank"{{/if}} class="mr-2"><img class="inline-block" src="{{{$image IMAGE}}}", alt="{{IMAGE_ALT}}"></a>
+		<a href="{{URL}}"{{#if OPEN_IN_NEW_WINDOW}} target="_blank"{{/if}} class="mr-2"><img class="inline-block h-14" src="{{{$image IMAGE}}}", alt="{{IMAGE_ALT}}"></a>
 	{{/each}}
 	</div>
 	{{/if}}
