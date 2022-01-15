@@ -14,8 +14,8 @@
             "content/image/zphvpkjpmgiu4uec1qij.png",
             "content/image/aaaa.svg",
             "content/image/bqi3lyubmepapwod6a13.png",
-            "content/image/cv8ai4y7vp71pjgkixhr.svg",
-            "content/image/62li35nuumq8aiv3f0u0.svg"
+            "content/image/62li35nuumq8aiv3f0u0.svg",
+            "content/image/khrjw1gs7w4lhhu2yw3v.svg"
         ]
     },
     "configuration": {
@@ -104,7 +104,7 @@
             },
             "GENERAL": {
                 "SITE_NAME": "Lyrcs",
-                "SITE_LOGO": "content/image/cv8ai4y7vp71pjgkixhr.svg"
+                "SITE_LOGO": "content/image/khrjw1gs7w4lhhu2yw3v.svg"
             },
             "META": {
                 "LANGUAGE": "en",
