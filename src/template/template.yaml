@@ -8,7 +8,9 @@ meta:
   filePaths:
     - license.txt
     - index.html
+    - page.html
     - assets/script.js
+    - assets/style.css
     - assets/favicon.png
     - assets/og-image.png
     - assets/hero.png
@@ -16,6 +18,9 @@ meta:
     - assets/logo.png
     - assets/downloadmac.svg
     - content/markdown/reason.md
+    - content/markdown/page-text.md
+    - header.partial
+    - footer.partial
 
 dataContract:
 
@@ -226,6 +231,27 @@ dataContract:
                 type: (boolean)
                 defaultValue: true
 
+  PAGES:
+    sections:
+      PAGES:
+        properties:
+          PAGES:
+            type: (collection)
+            defaultOccurrences: 1
+            properties:
+              TITLE:
+                type: (text)
+                defaultValue: Page
+              FILE_NAME:
+                type: (text)
+                required: false
+              CONTENT:
+                type: (markdown)
+                defaultFilePath: content/markdown/page-text.md
+              HEADER:
+                type: (boolean)
+                defaultValue: true
+
   COMMON:
     _label: Common
     sections:
@@ -301,3 +327,10 @@ pages:
   INDEX:
     filePath: index.html
     templateFilePath: index.html
+
+  PAGE:
+    filePath: page.html
+    templateFilePath: page.html
+    multiplier:
+      dataPath: PAGES.PAGES.PAGES
+      fileNameDataPath: FILE_NAME

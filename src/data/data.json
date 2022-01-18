@@ -8,6 +8,7 @@
             "content/markdown/descript-06ah7yx7yyux.md",
             "content/markdown/descript-insjqao62fke.md",
             "content/markdown/descript-cvvwm16jkxh5.md",
+            "content/markdown/descript-cvvwm16jkxh6.md",
             "content/image/4xqs0nyljmlvqvwsmcp7.png",
             "content/image/sa8nlp05qxjx2mvfyhca.png",
             "content/image/re4kyzuxs6jxz1m80sam.png",
@@ -95,6 +96,18 @@
         "LINKS": {
             "LINKS": {
                 "LINKS": []
+            }
+        },
+        "PAGES": {
+            "PAGES": {
+                "PAGES": [
+                    {
+                        "TITLE": "Privacy Policy",
+                        "FILE_NAME": "privacy",
+                        "CONTENT": "content/markdown/descript-cvvwm16jkxh6.md",
+                        "HEADER": true
+                    }
+                ]
             }
         },
         "COMMON": {

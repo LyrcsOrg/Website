@@ -1,0 +1,9 @@
+{{> header title=$PAGE.DATA.TITLE description=($markdown2text $PAGE.DATA.CONTENT 160) ogImage=($markdown_thumbnail $PAGE.DATA.CONTENT)}}
+
+<section class="bg-white py-8">
+	<div class="page-markdown container max-w-4xl mx-auto m-8 text-gray-800 px-10">
+		{{{$markdown $PAGE.DATA.CONTENT}}}
+	</div>
+</section>
+
+{{> footer}}
