@@ -37,7 +37,7 @@
 	<div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
 			
 		<div class="pl-4 flex items-center mr-1">
-			<a class="toggleColour text-white no-underline hover:no-underline font-['Pacifico'] text-2xl lg:text-2xl" href="#">
+			<a class="toggleColour text-white no-underline hover:no-underline font-['Pacifico'] text-2xl lg:text-2xl" href="./index.html">
 				<img src="{{{$image COMMON.GENERAL.SITE_LOGO}}}" class="h-10 fill-current inline" alt="" />
 				<span class="pt-1 inline-block absolute pl-2">{{COMMON.GENERAL.SITE_NAME}}</span>
 			</a>

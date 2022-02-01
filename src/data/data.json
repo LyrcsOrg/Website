@@ -9,6 +9,7 @@
             "content/markdown/descript-insjqao62fke.md",
             "content/markdown/descript-cvvwm16jkxh5.md",
             "content/markdown/descript-cvvwm16jkxh6.md",
+            "content/markdown/descript-4y7olcegx0ob.md",
             "content/image/4xqs0nyljmlvqvwsmcp7.png",
             "content/image/sa8nlp05qxjx2mvfyhca.png",
             "content/image/re4kyzuxs6jxz1m80sam.png",
@@ -16,7 +17,8 @@
             "content/image/aaaa.svg",
             "content/image/bqi3lyubmepapwod6a13.png",
             "content/image/62li35nuumq8aiv3f0u0.svg",
-            "content/image/khrjw1gs7w4lhhu2yw3v.svg"
+            "content/image/khrjw1gs7w4lhhu2yw3v.svg",
+            "content/image/bshovbfpxj4ye8xgiu6o.png"
         ]
     },
     "configuration": {
@@ -45,6 +47,12 @@
                 "TITLE": "Features You'll Love",
                 "LINES": [
                     {
+                        "TITLE": "Bundled Rhyme Dictionary",
+                        "DESCRIPTION": "content/markdown/descript-4y7olcegx0ob.md",
+                        "DIRECTION": "right",
+                        "IMAGE": "content/image/bshovbfpxj4ye8xgiu6o.png"
+                    },
+                    {
                         "TITLE": "Instant Syllable Counting",
                         "DESCRIPTION": "content/markdown/descript-insjqao62fke.md",
                         "DIRECTION": "left",
@@ -65,7 +73,7 @@
                 ]
             },
             "COLUMNS": {
-                "SHOW": true,
+                "SHOW": false,
                 "TITLE": "Upcoming",
                 "COLUMNS": [
                     {
