@@ -47,7 +47,18 @@
 	text-decoration: underline;
 }
 
-.page-markdown ul {
-	list-style-type: disc;
-	margin-left: 30px;
+.page-markdown ul li::before {
+  	content: "●";
+  	margin: 0 5px 0 -15px;
+  	color: #9253BD;
+}
+
+ul li::before {
+  	content: "●";
+  	margin: 0 5px 0 -15px;
+  	color: #9253BD;
+}
+
+li {
+	padding-left: 1em;
 }
