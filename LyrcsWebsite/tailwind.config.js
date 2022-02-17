@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'lyrcs-purple': '#9253bd',
-        'lyrcs-blue': '#16c2bf'
+        'app-primary': '#9253bd',
+        'app-secondary': '#16c2bf'
       }
     },
   },
