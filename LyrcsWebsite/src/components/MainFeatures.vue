@@ -2,7 +2,6 @@
 <template>
   <div class="py-16 bg-gray-50 overflow-hidden lg:py-24">
     <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-
       <div class="relative">
         <h2
           class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
@@ -10,52 +9,18 @@
         <p class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">{{ header.subtitle }}</p>
       </div>
 
-      <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
-        <div class="relative">
-          <h3
-            class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
-          >Transfer funds world-wide</h3>
-          <p
-            class="mt-3 text-lg text-gray-500"
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-          <dl class="mt-10 space-y-10">
-            <div v-for="item in transferFeatures" :key="item.id" class="relative" :class=" { 'bg-red-500': item.id == 1 }">
-              <dt>
-                <div
-                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
-                >
-                  <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">{{ item.name }}</p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">{{ item.description }}</dd>
-            </div>
-          </dl>
-        </div>
-
-        <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
-          <img
-            class="relative mx-auto"
-            width="490"
-            src="https://tailwindui.com/img/features/feature-example-1.png"
-            alt
-          />
-        </div>
-      </div>
-      
-      <div class="relative mt-12 sm:mt-16 lg:mt-24">
+      <div v-for="item in features" :key="item.id" class="relative mt-12 sm:mt-16 lg:mt-24">
         <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
-          <div class="lg:col-start-2">
+          <div
+            :class="{ 'lg:col-start-1': item.id % 2 !== 0, 'lg:col-start-2': item.id % 2 === 0 }"
+          >
             <h3
               class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
-            >Always in the loop</h3>
-            <p
-              class="mt-3 text-lg text-gray-500"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            >{{ item.title }}</h3>
+            <p class="mt-3 text-lg text-gray-500">{{ item.subtitle }}</p>
 
             <dl class="mt-10 space-y-10">
-              <div v-for="item in communicationFeatures" :key="item.id" class="relative">
+              <div v-for="item in item.details" :key="item.id" class="relative">
                 <dt>
                   <div
                     class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
@@ -69,7 +34,10 @@
             </dl>
           </div>
 
-          <div class="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
+          <div
+            class="mt-10 -mx-4 relative lg:mt-0"
+            :class="{ 'lg:col-start-1': item.id % 2 === 0, 'lg:col-start-2': item.id % 2 !== 0 }"
+          >
             <img
               class="relative mx-auto"
               width="490"
@@ -87,109 +55,130 @@
 import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, MailIcon, ScaleIcon } from '@heroicons/vue/outline'
 
 const header = {
-  title: "Here's why you'll love Lyrcs",
+  title: "Why You'll Love Lyrcs",
   subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in, accusamus quisquam."
 }
 
 const features = [
   {
     id: 1,
-    title: "transfer",
-    subtitle: "subtitle jasdjhasdjhasd",
+    title: "Rhyme Dictionary",
+    subtitle: "Gone are the days of opening your browser to check rhymezone.",
     details: [
       {
         id: 1,
-        name: 'Competitive exchange rates',
+        name: 'No Wait Times',
         description:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+          'Results are given in an instant.',
         icon: GlobeAltIcon,
       },
       {
         id: 2,
-        name: 'No hidden fees',
+        name: 'Grouping',
         description:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+          'Group the results how you like them; syllables or letters.',
         icon: ScaleIcon,
       },
       {
         id: 3,
-        name: 'Transfers are instant',
+        name: 'Insert or Copy',
         description:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+          'Insert results directly at your cursor or copy and paste to the perfect spot.',
         icon: LightningBoltIcon,
       }
     ]
   },
   {
     id: 2,
-    title: "always",
-    subtitle: "lorem",
+    title: "Syllable Counting",
+    subtitle: "Looking at your fingers to count syllables is now a thing of the past.",
     details: [
       {
         id: 1,
-        name: 'Mobile notifications',
+        name: 'Per Line',
         description:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+          'View the exact number of syllables per line, making it easy to pair up verses.',
         icon: AnnotationIcon,
       },
       {
         id: 2,
-        name: 'Reminder emails',
+        name: 'Per Selection',
         description:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+          "Right click on selected text to view its syllable count.",
+        icon: MailIcon,
+      },
+      {
+        id: 3,
+        name: 'Override',
+        description:
+          'If you pronounce a word differently or Lyrcs got it wrong (please let us know), right click to override the count.',
+        icon: MailIcon,
+      },
+    ]
+  },
+  {
+    id: 3,
+    title: "Fine Design",
+    subtitle: "Working late at night? Eyesight isn't what it used to be? Wish you could work without distractions? You're in good hands.",
+    details: [
+      {
+        id: 1,
+        name: 'Minimalistic UI',
+        description:
+          'Lyrcs is designed to have as little distractions as possible, leaving you to focus on your content.',
+        icon: AnnotationIcon,
+      },
+      {
+        id: 2,
+        name: 'Dark Mode Support',
+        description:
+          'Get blinded by the brilliant work you create, not by white pixels.',
+        icon: MailIcon,
+      },
+      {
+        id: 3,
+        name: 'Font Adjustable',
+        description:
+          'Leave your glasses at home grandma, CMD - or CMD + to adjust the font.',
+        icon: MailIcon,
+      },
+    ]
+  },
+  {
+    id: 4,
+    title: "Native macOS",
+    subtitle: "Everything you come to expect from a native macOS app is included.",
+    details: [
+      {
+        id: 1,
+        name: 'Spelling and Grammar',
+        description:
+          "We didn't win any spelling bees as kids and if you didn't either, Lyrcs will check it all for you.",
+        icon: AnnotationIcon,
+      },
+      {
+        id: 2,
+        name: 'Undo Redo',
+        description:
+          'What kind of writing tool would we be without this life saving feature?',
+        icon: MailIcon,
+      },
+      {
+        id: 3,
+        name: 'Sharing',
+        description:
+          'Lyrics finished but needing to run it past the partner? File > Share',
         icon: MailIcon,
       },
     ]
   }
 ]
 
-const transferFeatures = [
-  {
-    id: 1,
-    name: 'Competitive exchange rates',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: GlobeAltIcon,
-  },
-  {
-    id: 2,
-    name: 'No hidden fees',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: ScaleIcon,
-  },
-  {
-    id: 3,
-    name: 'Transfers are instant',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LightningBoltIcon,
-  },
-]
-const communicationFeatures = [
-  {
-    id: 1,
-    name: 'Mobile notifications',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: AnnotationIcon,
-  },
-  {
-    id: 2,
-    name: 'Reminder emails',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: MailIcon,
-  },
-]
-
 export default {
   setup() {
     return {
       header,
-      features,
-      transferFeatures,
-      communicationFeatures,
+      features
     }
   },
 }

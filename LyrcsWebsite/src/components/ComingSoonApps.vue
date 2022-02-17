@@ -5,7 +5,7 @@
       <div class="text-center">
         <h2 class="text-base font-semibold text-indigo-600 tracking-wide uppercase">Coming Soon</h2>
         <p class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">Mobile Apps.</p>
-        <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">Write your lyics on the go.</p>
+        <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">Write your lyrics on the go.</p>
       </div>
     </div>
   </div>
