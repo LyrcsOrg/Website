@@ -7,7 +7,7 @@ import SectionTitle from '../components/SectionTitle.vue';
 </script>
 
 <template>
-    <PageTitle title="Support"></PageTitle>
+    <PageTitle title="Savings Per Song"></PageTitle>
     <SectionTitle title="Frequently Asked Questions" subtitle="See if any of these answer what's on your mind."></SectionTitle>
     <FAQ></FAQ>
     <SectionTitle title="Keyboard Shortcuts" subtitle="Try these to speed up your workflow."></SectionTitle>
