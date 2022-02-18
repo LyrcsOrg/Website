@@ -28,7 +28,7 @@
             </h2>
             <p
               class="mt-4 text-lg leading-6 text-gray-100"
-            >If you're not 100% satisfied, we don't offer refunds because Lyrcs is free. What have you got to lose?</p>
+            >If you're not 100% satisfied, we don't offer refunds because Lyrcs is free. What have you got to lose? Certainly not money.</p>
             <a
               href="#"
               class="mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-app-primary hover:bg-gray-200"
@@ -38,7 +38,7 @@
         <div class="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
           <img
             class="transform translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20"
-            src="https://tailwindui.com/img/component-images/full-width-with-sidebar.jpg"
+            src="@/assets/hero.png"
             alt="App screenshot"
           />
         </div>

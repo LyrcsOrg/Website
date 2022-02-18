@@ -23,7 +23,7 @@
               <div v-for="item in item.details" :key="item.id" class="relative">
                 <dt>
                   <div
-                    class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                    class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-app-primary text-white"
                   >
                     <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                   </div>
@@ -38,12 +38,7 @@
             class="mt-10 -mx-4 relative lg:mt-0"
             :class="{ 'lg:col-start-1': item.id % 2 === 0, 'lg:col-start-2': item.id % 2 !== 0 }"
           >
-            <img
-              class="relative mx-auto"
-              width="490"
-              src="https://tailwindui.com/img/features/feature-example-2.png"
-              alt
-            />
+            <img class="relative mx-auto" width="490" :src="item.image" alt />
           </div>
         </div>
       </div>
@@ -52,11 +47,16 @@
 </template>
 
 <script>
-import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, MailIcon, ScaleIcon } from '@heroicons/vue/outline'
+import { MenuIcon, ShareIcon, BackspaceIcon, CheckIcon, PlusIcon, MoonIcon, DesktopComputerIcon, PencilIcon, CursorClickIcon, AdjustmentsIcon, ViewListIcon, ClipboardCopyIcon, ClockIcon } from '@heroicons/vue/outline'
+import ScreenshotRhymes from '@/assets/rhymes.png'
+import ScreenshotSyllables from '@/assets/syllables.png'
+import ScreenshotDesign from '@/assets/design.png'
+import ScreenshotSpelling from '@/assets/spelling.png'
+
 
 const header = {
   title: "Why You'll Love Lyrcs",
-  subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in, accusamus quisquam."
+  subtitle: "All the essential tools you need to write that story."
 }
 
 const features = [
@@ -64,27 +64,28 @@ const features = [
     id: 1,
     title: "Rhyme Dictionary",
     subtitle: "Gone are the days of opening your browser to check rhymezone.",
+    image: ScreenshotRhymes,
     details: [
       {
         id: 1,
         name: 'No Wait Times',
         description:
           'Results are given in an instant.',
-        icon: GlobeAltIcon,
+        icon: ClockIcon,
       },
       {
         id: 2,
         name: 'Grouping',
         description:
-          'Group the results how you like them; syllables or letters.',
-        icon: ScaleIcon,
+          'Group the results how you like them; by syllables, letters or none at all.',
+        icon: MenuIcon,
       },
       {
         id: 3,
         name: 'Insert or Copy',
         description:
           'Insert results directly at your cursor or copy and paste to the perfect spot.',
-        icon: LightningBoltIcon,
+        icon: ClipboardCopyIcon,
       }
     ]
   },
@@ -92,27 +93,28 @@ const features = [
     id: 2,
     title: "Syllable Counting",
     subtitle: "Looking at your fingers to count syllables is now a thing of the past.",
+    image: ScreenshotSyllables,
     details: [
       {
         id: 1,
         name: 'Per Line',
         description:
           'View the exact number of syllables per line, making it easy to pair up verses.',
-        icon: AnnotationIcon,
+        icon: ViewListIcon,
       },
       {
         id: 2,
         name: 'Per Selection',
         description:
           "Right click on selected text to view its syllable count.",
-        icon: MailIcon,
+        icon: CursorClickIcon,
       },
       {
         id: 3,
         name: 'Override',
         description:
           'If you pronounce a word differently or Lyrcs got it wrong (please let us know), right click to override the count.',
-        icon: MailIcon,
+        icon: PencilIcon,
       },
     ]
   },
@@ -120,27 +122,28 @@ const features = [
     id: 3,
     title: "Fine Design",
     subtitle: "Working late at night? Eyesight isn't what it used to be? Wish you could work without distractions? You're in good hands.",
+    image: ScreenshotDesign,
     details: [
       {
         id: 1,
         name: 'Minimalistic UI',
         description:
           'Lyrcs is designed to have as little distractions as possible, leaving you to focus on your content.',
-        icon: AnnotationIcon,
+        icon: DesktopComputerIcon,
       },
       {
         id: 2,
         name: 'Dark Mode Support',
         description:
           'Get blinded by the brilliant work you create, not by white pixels.',
-        icon: MailIcon,
+        icon: MoonIcon,
       },
       {
         id: 3,
         name: 'Font Adjustable',
         description:
-          'Leave your glasses at home grandma, CMD - or CMD + to adjust the font.',
-        icon: MailIcon,
+          'Leave your glasses at home grandma, use CMD -, CMD + or CMD 0 to adjust font.',
+        icon: PlusIcon,
       },
     ]
   },
@@ -148,27 +151,28 @@ const features = [
     id: 4,
     title: "Native macOS",
     subtitle: "Everything you come to expect from a native macOS app is included.",
+    image: ScreenshotSpelling,
     details: [
       {
         id: 1,
         name: 'Spelling and Grammar',
         description:
           "We didn't win any spelling bees as kids and if you didn't either, Lyrcs will check it all for you.",
-        icon: AnnotationIcon,
+        icon: CheckIcon,
       },
       {
         id: 2,
         name: 'Undo Redo',
         description:
           'What kind of writing tool would we be without this life saving feature?',
-        icon: MailIcon,
+        icon: BackspaceIcon,
       },
       {
         id: 3,
         name: 'Sharing',
         description:
           'Lyrics finished but needing to run it past the partner? File > Share',
-        icon: MailIcon,
+        icon: ShareIcon,
       },
     ]
   }

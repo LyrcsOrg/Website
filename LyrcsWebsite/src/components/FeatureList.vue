@@ -25,8 +25,8 @@
 import { CheckIcon } from '@heroicons/vue/outline'
 
 const header = {
-  title: "Here's a Few More Things",
-  subtitle: "As much as the main features will draw you in, these smaller ones will keep your experience running smoothly."
+  title: "If That Wasn't Enough",
+  subtitle: "Here are a few more things we think you'll love."
 }
 
 const features = [
