@@ -32,7 +32,7 @@ const header = {
 const features = [
   {
     name: 'Keyboard Shortcuts',
-    description: 'View them <a href="#">here</a>.',
+    description: "View them <a href='#/support' class='underline'>here</a>.",
   },
   {
     name: 'Ad-Free',
