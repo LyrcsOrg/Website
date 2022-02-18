@@ -118,7 +118,7 @@ const cta = "Download"
 
 const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'FAQ', href: '/faq' }
+    { name: 'Support', href: '/support' }
 ]
 
 export default {

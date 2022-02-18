@@ -4,11 +4,11 @@ import './index.css'
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 import Home from './pages/Home.vue'
-import FAQ from './pages/FAQ.vue'
+import Support from './pages/Support.vue'
 
 const routes = [
     { path: '/', component: Home },
-    { path: '/faq', component: FAQ },
+    { path: '/support', component: Support },
 ]
 
 const router = createRouter({
