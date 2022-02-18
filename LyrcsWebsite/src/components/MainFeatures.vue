@@ -23,7 +23,7 @@
               <div v-for="item in item.details" :key="item.id" class="relative">
                 <dt>
                   <div
-                    class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-app-primary text-white"
+                    class="absolute flex items-center justify-center h-10 w-10 rounded-md bg-app-primary text-white"
                   >
                     <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                   </div>

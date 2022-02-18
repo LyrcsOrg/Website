@@ -1,19 +1,28 @@
-<script setup>
-import Hero from './components/Hero.vue'
-import MainFeatures from './components/MainFeatures.vue'
-import FeatureList from './components/FeatureList.vue'
-import CTA from './components/CTA.vue'
-import Footer from './components/Footer.vue'
-import ComingSoonApps from './components/ComingSoonApps.vue'
-import Stats from './components/Stats.vue'
-</script>
-
 <template>
-    <Hero />
+    <Navigation class="z-50"></Navigation>
+    <!-- <router-link to="/">Home</router-link>
+    <router-link to="/faq">FAQ</router-link> -->
+    <router-view></router-view>
+    <!-- <Hero />
     <MainFeatures />
     <Stats />
     <FeatureList />
     <ComingSoonApps />
     <CTA />
-    <Footer />
+    <Footer /> -->
 </template>
+
+<script>
+import Navigation from './components/Navigation.vue'
+
+export default {
+  components: {
+    Navigation
+  },
+  setup() {
+    return {
+        
+    }
+  },
+}
+</script>
