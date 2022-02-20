@@ -12,18 +12,26 @@
         <div class="absolute inset-0 h-1/2 bg-white" />
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="max-w-4xl mx-auto">
-            <dl class="rounded-lg bg-white drop-shadow-[0_0_8px_rgba(0,0,0,0.25)] sm:grid sm:grid-cols-3">
-              <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
+            <dl
+              class="rounded-lg bg-white drop-shadow-[0_0_8px_rgba(0,0,0,0.25)] sm:grid sm:grid-cols-3"
+            >
+              <div
+                class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r"
+              >
                 <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Minutes</dt>
-                <dd class="order-1 text-5xl font-extrabold text-indigo-600">17:24</dd>
+                <dd class="order-1 text-5xl font-extrabold text-indigo-600">37:23</dd>
               </div>
-              <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+              <div
+                class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r"
+              >
                 <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Memory</dt>
                 <dd class="order-1 text-5xl font-extrabold text-indigo-600">210 MB</dd>
               </div>
-              <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
+              <div
+                class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l"
+              >
                 <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Relationships</dt>
-                <dd class="order-1 text-5xl font-extrabold text-indigo-600">1</dd>
+                <dd class="order-1 text-5xl font-extrabold text-indigo-600">{{ statsRelationships }}</dd>
               </div>
             </dl>
           </div>
@@ -35,10 +43,15 @@
 
 <script>
 export default {
-    props: {
-        title: String,
-        subtitle: String
+  data() {
+    return {
+      globals: this.statsRelationships
     }
+  },
+  props: {
+    title: String,
+    subtitle: String
+  }
 }
 
 </script>

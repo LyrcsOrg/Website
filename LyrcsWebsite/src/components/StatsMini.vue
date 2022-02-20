@@ -9,15 +9,15 @@
             <dl class="rounded-lg bg-white drop-shadow-[0_0_8px_rgba(0,0,0,0.25)] sm:grid sm:grid-cols-3">
               <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                 <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Minutes</dt>
-                <dd class="order-1 text-5xl font-extrabold text-indigo-600">10:30</dd>
+                <dd class="order-1 text-5xl font-extrabold text-indigo-600">37:23</dd>
               </div>
               <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
                 <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Memory</dt>
-                <dd class="order-1 text-5xl font-extrabold text-indigo-600">20mb</dd>
+                <dd class="order-1 text-5xl font-extrabold text-indigo-600">210 MB</dd>
               </div>
               <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
                 <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Relationships</dt>
-                <dd class="order-1 text-5xl font-extrabold text-indigo-600">1</dd>
+                <dd class="order-1 text-5xl font-extrabold text-indigo-600">1+</dd>
               </div>
             </dl>
           </div>

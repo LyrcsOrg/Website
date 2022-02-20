@@ -30,4 +30,8 @@ const app = createApp(App)
 
 app.use(router)
 
+app.config.globalProperties.statsMinutes = "37:23"
+app.config.globalProperties.statsMemory = "210 MB"
+app.config.globalProperties.statsRelationships = "1+"
+
 app.mount('#app')
