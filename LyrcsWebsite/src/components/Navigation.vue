@@ -118,7 +118,8 @@ const cta = "Download"
 
 const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Support', href: '/support' }
+    { name: 'Support', href: '/support' },
+    { name: 'Savings', href: '/savings' }
 ]
 
 export default {

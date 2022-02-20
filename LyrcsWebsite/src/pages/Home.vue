@@ -11,7 +11,7 @@ import Stats from '@/components/Stats.vue'
 <template>
     <Hero />
     <MainFeatures />
-    <Stats />
+    <Stats title="What could Lyrcs save you per album?" subtitle="Assuming an album is written with a friend requiring rhyme searching and syllable counting. <a href='#/savings' class='underline'>Check out how we come up with the figures</a>." />
     <FeatureList />
     <ComingSoonApps />
     <CTA />
