@@ -31,11 +31,5 @@ export default {
       ]
     }
   }
-  // setup() {
-  //   return {
-  //     faqs,
-  //     aaa: "hello"
-  //   }
-  // }
 }
 </script>

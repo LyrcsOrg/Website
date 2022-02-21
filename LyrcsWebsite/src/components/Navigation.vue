@@ -36,15 +36,19 @@
                                 </div>
                             </div>
                             <div class="hidden md:flex md:space-x-10">
-
-                                <router-link v-for="item in navigation" :key="item.name" :to="item.href" class="font-medium text-gray-100 hover:text-gray-300">{{ item.name }}</router-link>
+                                <router-link
+                                    v-for="item in navigation"
+                                    :key="item.name"
+                                    :to="item.href"
+                                    class="font-medium text-gray-100 hover:text-gray-300"
+                                >{{ item.name }}</router-link>
 
                                 <!-- <a
                                     v-for="item in navigation"
                                     :key="item.name"
                                     :href="item.href"
                                     class="font-medium text-gray-500 hover:text-gray-900"
-                                >{{ item.name }}</a> -->
+                                >{{ item.name }}</a>-->
                             </div>
                             <div
                                 class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0"
@@ -89,14 +93,19 @@
                                     </div>
                                 </div>
                                 <div class="px-2 pt-2 pb-3 space-y-1">
-                                    <router-link v-for="item in navigation" :key="item.name" :to="item.href" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{{ item.name }}</router-link>
+                                    <router-link
+                                        v-for="item in navigation"
+                                        :key="item.name"
+                                        :to="item.href"
+                                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                                    >{{ item.name }}</router-link>
 
                                     <!-- <a
                                         v-for="item in navigation"
                                         :key="item.name"
                                         :href="item.href"
                                         class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                                    >{{ item.name }}</a> -->
+                                    >{{ item.name }}</a>-->
                                 </div>
                                 <a
                                     :href="this.konstantAppStoreURL"
@@ -116,15 +125,8 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 
-const cta = "Download"
-
-const navigation = [
-    { name: 'Support', href: '/support' },
-    { name: 'Savings', href: '/savings' }
-]
-
 export default {
-    inject: ["konstantAppStoreURL"],
+    inject: ["konstantAppStoreURL", "konstantNavigationSupport"],
     components: {
         Popover,
         PopoverButton,
@@ -132,10 +134,13 @@ export default {
         MenuIcon,
         XIcon,
     },
-    setup() {
+    data() {
         return {
-            navigation,
-            cta
+            navigation: [
+                { name: 'Support', href: this.konstantNavigationSupport },
+                { name: 'Savings', href: '/savings' }
+            ],
+            cta: "Download"
         }
     },
 }

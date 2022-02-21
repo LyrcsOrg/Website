@@ -13,7 +13,6 @@ import CTAContactUs from '../components/CTAContactUs.vue';
     <FAQ />
     <SectionTitle title="Keyboard Shortcuts" subtitle="Try these to speed up your workflow."></SectionTitle>
     <KeyboardShortcuts />
-    <SectionTitle title="Maybe we missed something?" subtitle="Let us know."></SectionTitle>
     <CTAContactUs />
     <Footer />
 </template>

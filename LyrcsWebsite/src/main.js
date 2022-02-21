@@ -8,9 +8,11 @@ import Support from './pages/Support.vue'
 import Savings from './pages/Savings.vue'
 import Privacy from './pages/Privacy.vue'
 
+const routeSupport = '/support'
+
 const routes = [
     { path: '/', component: Home },
-    { path: '/support', component: Support },
+    { path: routeSupport, component: Support },
     { path: '/savings', component: Savings },
     { path: '/privacy', component: Privacy },
 ]
@@ -37,8 +39,8 @@ app.provide("konstantStatsMemory", "210 MB")
 app.provide("konstantStatsRelationships", "1+")
 app.provide("konstantEmail", "hi@lyrcs.app")
 app.provide("konstantAppStoreURL", "https://apps.apple.com/app/apple-store/id1599888045?pt=117831961&ct=website&mt=8")
+app.provide("konstantNavigationSupport", routeSupport)
 // global prop
-// appstoreconnect campaign url for all download buttons
 
 // TODO: every time Lyrcs appears, format with custom font.
 
