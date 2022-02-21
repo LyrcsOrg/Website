@@ -43,7 +43,7 @@ const faqs = [
     {
         question: "Font Reset",
         answer:
-            "⌘ -",
+            "⌘ 0",
     },
     {
         question: "New Tab",
