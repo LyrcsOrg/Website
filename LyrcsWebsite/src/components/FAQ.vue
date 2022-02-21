@@ -13,25 +13,29 @@
 </template>
 
 <script>
-const faqs = [
-  {
-    question: "What's the catch, how is this free?",
-    answer:
-      "Lyrcs doesn't call out to any APIs or require much time to maintain. Until this becomes a full time job you can expect Lyrcs to remain free ❤️.",
-  },
-  {
-    question: "Can you implement X feature?",
-    answer:
-      "Send an email to <a href='mailto:hi@lyrcs.app' class='underline'>hi@lyrcs.app</a> and we'll see what we can do.",
-  },
-  // More questions...
-]
-
 export default {
-  setup() {
+  inject: ["konstantEmail"],
+  data() {
     return {
-      faqs,
+      faqs: [
+        {
+          question: "What's the catch, how is this free?",
+          answer:
+            "Lyrcs doesn't call out to any APIs or require much time to maintain. Until this becomes a full time job you can expect Lyrcs to remain free ❤️.",
+        },
+        {
+          question: "Can you implement X feature?",
+          answer:
+            `Send an email to <a href='mailto:${this.konstantEmail}' class='underline'>${this.konstantEmail}</a> and we'll see what we can do.`,
+        }
+      ]
     }
-  },
+  }
+  // setup() {
+  //   return {
+  //     faqs,
+  //     aaa: "hello"
+  //   }
+  // }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
-    <Navigation></Navigation>
-    <router-view></router-view>
+  <Navigation></Navigation>
+  <router-view></router-view>
 </template>
 
 <script>
@@ -12,7 +12,7 @@ export default {
   },
   setup() {
     return {
-        
+
     }
   },
 }

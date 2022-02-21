@@ -54,7 +54,7 @@ import CTA from '../components/CTA.vue';
                 </ul>
                 <p>
                     Combining this together becomes
-                    <strong>37:23 minutes</strong>:
+                    <strong>{{ this.konstantStatsMinutes }} minutes</strong>:
                 </p>
                 <ul>
                     <li>
@@ -87,7 +87,7 @@ import CTA from '../components/CTA.vue';
                 </ul>
                 <p>
                     Combining this together becomes
-                    <strong>210 MB</strong>:
+                    <strong>{{ this.konstantStatsMemory }}</strong>:
                 </p>
                 <ul>
                     <li>
@@ -134,3 +134,9 @@ import CTA from '../components/CTA.vue';
     <CTA></CTA>
     <Footer></Footer>
 </template>
+
+<script>
+export default {
+    inject: ["konstantStatsMinutes", "konstantStatsMemory", "konstantStatsRelationships"]
+}
+</script>

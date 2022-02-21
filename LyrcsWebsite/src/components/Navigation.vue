@@ -51,7 +51,8 @@
                             >
                                 <span class="inline-flex rounded-md shadow">
                                     <a
-                                        href="#"
+                                        :href="this.konstantAppStoreURL"
+                                        target="about:_blank"
                                         class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-app-primary bg-white hover:bg-gray-200"
                                     >{{ cta }}</a>
                                 </span>
@@ -98,7 +99,8 @@
                                     >{{ item.name }}</a> -->
                                 </div>
                                 <a
-                                    href="#"
+                                    :href="this.konstantAppStoreURL"
+                                    target="about:_blank"
                                     class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700"
                                 >{{ cta }}</a>
                             </div>
@@ -117,12 +119,12 @@ import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 const cta = "Download"
 
 const navigation = [
-    { name: 'Home', href: '/' },
     { name: 'Support', href: '/support' },
     { name: 'Savings', href: '/savings' }
 ]
 
 export default {
+    inject: ["konstantAppStoreURL"],
     components: {
         Popover,
         PopoverButton,

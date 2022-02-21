@@ -56,7 +56,7 @@ import ScreenshotSpelling from '@/assets/spelling.png'
 
 const header = {
   title: "Why You'll Love Lyrcs",
-  subtitle: "All the essential tools you need to write that story."
+  subtitle: "All the essential tools you need to write the perfect story."
 }
 
 const features = [

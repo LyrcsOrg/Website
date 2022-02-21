@@ -30,7 +30,8 @@
               class="mt-4 text-lg leading-6 text-gray-100"
             >If you're not 100% satisfied, we don't offer refunds because Lyrcs is free. What have you got to lose? Certainly not money.</p>
             <a
-              href="#"
+              :href="this.konstantAppStoreURL"
+              target="about:_blank"
               class="mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-app-primary hover:bg-gray-200"
             >Download</a>
           </div>
@@ -46,3 +47,9 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  inject: ["konstantAppStoreURL"]
+}
+</script>

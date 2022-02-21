@@ -60,7 +60,7 @@ const features = [
   },
   {
     name: 'Font Choices',
-    description: "Prefer to write in Times New Roman? Lyrcs won't hold you back",
+    description: "Prefer to write in Times New Roman? Lyrcs won't hold you back.",
   },
 ]
 

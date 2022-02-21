@@ -6,11 +6,13 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './pages/Home.vue'
 import Support from './pages/Support.vue'
 import Savings from './pages/Savings.vue'
+import Privacy from './pages/Privacy.vue'
 
 const routes = [
     { path: '/', component: Home },
     { path: '/support', component: Support },
-    { path: '/savings', component: Savings }
+    { path: '/savings', component: Savings },
+    { path: '/privacy', component: Privacy },
 ]
 
 const router = createRouter({
@@ -30,8 +32,14 @@ const app = createApp(App)
 
 app.use(router)
 
-app.config.globalProperties.statsMinutes = "37:23"
-app.config.globalProperties.statsMemory = "210 MB"
-app.config.globalProperties.statsRelationships = "1+"
+app.provide("konstantStatsMinutes", "37:23")
+app.provide("konstantStatsMemory", "210 MB")
+app.provide("konstantStatsRelationships", "1+")
+app.provide("konstantEmail", "hi@lyrcs.app")
+app.provide("konstantAppStoreURL", "https://apps.apple.com/app/apple-store/id1599888045?pt=117831961&ct=website&mt=8")
+// global prop
+// appstoreconnect campaign url for all download buttons
+
+// TODO: every time Lyrcs appears, format with custom font.
 
 app.mount('#app')

@@ -19,19 +19,19 @@
                 class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r"
               >
                 <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Minutes</dt>
-                <dd class="order-1 text-5xl font-extrabold text-indigo-600">37:23</dd>
+                <dd class="order-1 text-5xl font-extrabold text-indigo-600">{{ this.konstantStatsMinutes }}</dd>
               </div>
               <div
                 class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r"
               >
                 <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Memory</dt>
-                <dd class="order-1 text-5xl font-extrabold text-indigo-600">210 MB</dd>
+                <dd class="order-1 text-5xl font-extrabold text-indigo-600">{{ this.konstantStatsMemory }}</dd>
               </div>
               <div
                 class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l"
               >
                 <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Relationships</dt>
-                <dd class="order-1 text-5xl font-extrabold text-indigo-600">{{ statsRelationships }}</dd>
+                <dd class="order-1 text-5xl font-extrabold text-indigo-600">{{ this.konstantStatsRelationships }}</dd>
               </div>
             </dl>
           </div>
@@ -43,11 +43,7 @@
 
 <script>
 export default {
-  data() {
-    return {
-      globals: this.statsRelationships
-    }
-  },
+  inject: ["konstantStatsMinutes", "konstantStatsMemory", "konstantStatsRelationships"],
   props: {
     title: String,
     subtitle: String

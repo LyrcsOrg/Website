@@ -6,12 +6,14 @@ import CTA from '@/components/CTA.vue'
 import Footer from '@/components/Footer.vue'
 import ComingSoonApps from '@/components/ComingSoonApps.vue'
 import Stats from '@/components/Stats.vue'
+import Testimonial from '../components/Testimonial.vue'
 </script>
 
 <template>
     <Hero />
     <MainFeatures />
-    <Stats title="What could Lyrcs save you per album?" subtitle="Assuming an album is written with a friend requiring rhyme searching and syllable counting. <a href='#/savings' class='underline'>Check out how we come up with the figures</a>." />
+    <Testimonial />
+    <Stats title="What could Lyrcs save you per album?" subtitle="<a href='#/savings' class='underline'>Check out how we came up with the figures</a>." />
     <FeatureList />
     <ComingSoonApps />
     <CTA />
