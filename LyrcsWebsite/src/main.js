@@ -37,7 +37,7 @@ app.use(router)
 app.provide("konstantStatsMinutes", "37:23")
 app.provide("konstantStatsMemory", "210 MB")
 app.provide("konstantStatsRelationships", "1+")
-app.provide("konstantEmail", "hi@lyrcs.app")
+app.provide("konstantEmail", "support@lyrcs.app")
 app.provide("konstantAppStoreURL", "https://apps.apple.com/app/apple-store/id1599888045?pt=117831961&ct=website&mt=8")
 app.provide("konstantNavigationSupport", routeSupport)
 // global prop
