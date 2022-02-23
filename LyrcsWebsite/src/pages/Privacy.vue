@@ -28,7 +28,7 @@ import SectionTitle from '../components/SectionTitle.vue';
                     </li>
                 </ul>
                 <p>
-                    If you had any question, see the <router-link :to="this.konstantNavigationSupport">support</router-link> page to get in contact.
+                    If you have any question, see the <router-link :to="this.konstantNavigationSupport">support</router-link> page to get in contact.
                 </p>
             </div>
         </div>

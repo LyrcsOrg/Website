@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  inject: ["konstantEmail"],
+  inject: ["konstantContactForm"],
   data() {
     return {
       faqs: [
@@ -26,7 +26,7 @@ export default {
         {
           question: "Can you implement X feature?",
           answer:
-            `Send an email to <a href='mailto:${this.konstantEmail}' class='underline'>${this.konstantEmail}</a> and we'll see what we can do.`,
+            `<a href='${this.konstantContactForm}' class='underline'>Send a message</a> and we'll see what we can do.`,
         }
       ]
     }

@@ -103,15 +103,11 @@ import CTA from '../components/CTA.vue';
 
                 <h2>Relationships</h2>
                 <p>
-                    Perhaps the most important part; how does Lyrcs save relationships? This is much harder to come up with an assumption for but here are some examples of how
-                    <a
-                        href="https://open.spotify.com/track/4CNilDDYSlQ5KMP4OK8XmT?si=eeab09c134df4157"
-                        class="underline"
-                    >No Connection - PASTYL</a> may have provided relationship saving:
+                    Perhaps the most important part; how does Lyrcs save relationships? This is much harder to come up with an assumption for but here are some examples:
                 </p>
                 <ul>
                     <li>
-                        Your top line singer gets frustrated with how long it takes you to come up with new lyrics. They don't want to hear that your slow internet connection is what's to blame and decide to never work with you again.
+                        Your top line singer gets frustrated with how long it takes you to come up with new lyrics. They don't want to hear that your slow internet connection is what's to blame and decides to never work with you again.
                         <strong>Lyrcs could have saved the relationship with its instant rhyme results</strong>.
                     </li>
                     <li>

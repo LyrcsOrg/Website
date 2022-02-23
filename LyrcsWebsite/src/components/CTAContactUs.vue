@@ -28,11 +28,11 @@ const navigation = [
 ]
 
 export default {
-    inject: ["konstantEmail"],
+    inject: ["konstantContactForm"],
     data() {
         return {
-            link: `mailto:${this.konstantEmail}`,
-            cta: `Email ${this.konstantEmail}`
+            link: `${this.konstantContactForm}`,
+            cta: `Send Message`
         }
     },
 }

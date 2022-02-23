@@ -164,7 +164,7 @@ const features = [
         id: 2,
         name: 'Undo Redo',
         description:
-          'What kind of writing tool would we be without this life saving feature?',
+          'What kind of writing tool would Lyrcs be without this life saving feature?',
         icon: BackspaceIcon,
       },
       {

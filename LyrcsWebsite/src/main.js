@@ -40,6 +40,7 @@ app.provide("konstantStatsRelationships", "1+")
 app.provide("konstantEmail", "support@lyrcs.app")
 app.provide("konstantAppStoreURL", "https://apps.apple.com/app/apple-store/id1599888045?pt=117831961&ct=website&mt=8")
 app.provide("konstantNavigationSupport", routeSupport)
+app.provide("konstantContactForm", "https://share-eu1.hsforms.com/15bmb0uVjTHqMEOoRBfhkygf8pdx")
 // global prop
 
 // TODO: every time Lyrcs appears, format with custom font.
