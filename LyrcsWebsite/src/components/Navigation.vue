@@ -138,7 +138,8 @@ export default {
         return {
             navigation: [
                 { name: 'Support', href: this.konstantNavigationSupport },
-                { name: 'Savings', href: '/savings' }
+                { name: 'Savings', href: '/savings' },
+                // { name: 'Competitors', href: '/competitors' } 
             ],
             cta: "Download"
         }

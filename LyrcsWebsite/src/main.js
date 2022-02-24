@@ -7,6 +7,8 @@ import Home from './pages/Home.vue'
 import Support from './pages/Support.vue'
 import Savings from './pages/Savings.vue'
 import Privacy from './pages/Privacy.vue'
+import Competitors from './pages/Competitors.vue'
+import NotFound from './pages/NotFound.vue'
 
 const routeSupport = '/support'
 
@@ -15,6 +17,8 @@ const routes = [
     { path: routeSupport, component: Support },
     { path: '/savings', component: Savings },
     { path: '/privacy', component: Privacy },
+    { path: '/competitors', component: Competitors },
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 
 const router = createRouter({

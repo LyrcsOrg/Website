@@ -17,5 +17,4 @@ import Testimonial from '../components/Testimonial.vue'
     <FeatureList />
     <ComingSoonApps />
     <CTA />
-    <Footer />
 </template>

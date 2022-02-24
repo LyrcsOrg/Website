@@ -1,8 +1,7 @@
 <script setup>
 import FAQ from '@/components/FAQ.vue'
 import KeyboardShortcuts from '../components/KeyboardShortcuts.vue'
-import PageTitle from '@/components/PageTitle.vue';
-import Footer from '../components/Footer.vue';
+import PageTitle from '../components/PageTitle.vue';
 import SectionTitle from '../components/SectionTitle.vue';
 import CTAContactUs from '../components/CTAContactUs.vue';
 </script>
@@ -17,5 +16,4 @@ import CTAContactUs from '../components/CTAContactUs.vue';
     <SectionTitle title="Keyboard Shortcuts" subtitle="Try these to speed up your workflow."></SectionTitle>
     <KeyboardShortcuts />
     <CTAContactUs />
-    <Footer />
 </template>

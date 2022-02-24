@@ -128,7 +128,6 @@ import CTA from '../components/CTA.vue';
         </div>
     </div>
     <CTA></CTA>
-    <Footer></Footer>
 </template>
 
 <script>

@@ -33,7 +33,6 @@ import SectionTitle from '../components/SectionTitle.vue';
             </div>
         </div>
     </div>
-    <Footer></Footer>
 </template>
 
 <script>
