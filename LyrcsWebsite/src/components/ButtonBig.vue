@@ -11,6 +11,25 @@
 </template>
 
 <script>
+
+function createEnum(values) {
+  const enumObject = {};
+  for (const val of values) {
+    enumObject[val] = val;
+  }
+  return Object.freeze(enumObject);
+}
+
+
+const ButtonBigAppearance = createEnum([
+    "Primary", // Navigation bars
+    "Secondary", // Purple
+    "Tertiary" // Faded?
+])
+
+// TODO: Move out
+// TODO: Pass in props
+
 export default {
     props: {
         title: String

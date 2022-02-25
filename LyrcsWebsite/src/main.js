@@ -13,12 +13,49 @@ import NotFound from './pages/NotFound.vue'
 const routeSupport = '/support'
 
 const routes = [
-    { path: '/', component: Home },
-    { path: routeSupport, component: Support },
-    { path: '/savings', component: Savings },
-    { path: '/privacy', component: Privacy },
-    { path: '/competitors', component: Competitors },
-    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+    {
+        path: '/',
+        component: Home,
+        meta: {
+            title: "Home"
+        }
+    },
+    {
+        path: routeSupport,
+        component: Support,
+        meta: {
+            title: "Support"
+        }
+    },
+    {
+        path: '/savings',
+        component: Savings,
+        meta: {
+            title: "Savings"
+        }
+
+    },
+    { 
+        path: '/privacy', 
+        component: Privacy,
+        meta: {
+            title: "Privacy"
+        }
+    },
+    { 
+        path: '/competitors', 
+        component: Competitors,
+        meta: {
+            title: "Competitors"
+        }
+    },
+    { 
+        path: '/:pathMatch(.*)*', 
+        component: NotFound,
+        meta: {
+            title: "Page Not Found"
+        }
+    },
 ]
 
 const router = createRouter({

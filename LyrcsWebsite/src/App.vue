@@ -13,6 +13,14 @@ export default {
     Navigation,
     Footer
   },
+  watch: { // Update page title
+    $route: {
+      immediate: true,
+      handler(to, from) {
+        document.title = to.meta.title + " - Lyrcs" || 'Lyrcs';
+      }
+    },
+  },
   setup() {
     return {
 
