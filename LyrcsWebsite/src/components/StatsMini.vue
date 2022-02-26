@@ -17,7 +17,7 @@
                                 >Minutes</dt>
                                 <dd
                                     class="order-1 text-5xl font-extrabold text-indigo-600"
-                                >{{ this.konstantStatsMinutes }}</dd>
+                                >{{ konstantStatsMinutes }}</dd>
                             </div>
                             <div
                                 class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r"
@@ -27,7 +27,7 @@
                                 >Memory</dt>
                                 <dd
                                     class="order-1 text-5xl font-extrabold text-indigo-600"
-                                >{{ this.konstantStatsMemory }}</dd>
+                                >{{ konstantStatsMemory }}</dd>
                             </div>
                             <div
                                 class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l"
@@ -37,7 +37,7 @@
                                 >Relationships</dt>
                                 <dd
                                     class="order-1 text-5xl font-extrabold text-indigo-600"
-                                >{{ this.konstantStatsRelationships }}</dd>
+                                >{{ konstantStatsRelationships }}</dd>
                             </div>
                         </dl>
                     </div>

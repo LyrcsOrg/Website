@@ -54,7 +54,7 @@ import CTA from '../components/CTA.vue';
                 </ul>
                 <p>
                     Combining this together becomes
-                    <strong>{{ this.konstantStatsMinutes }} minutes</strong>:
+                    <strong>{{ konstantStatsMinutes }} minutes</strong>:
                 </p>
                 <ul>
                     <li>
@@ -87,7 +87,7 @@ import CTA from '../components/CTA.vue';
                 </ul>
                 <p>
                     Combining this together becomes
-                    <strong>{{ this.konstantStatsMemory }}</strong>:
+                    <strong>{{ konstantStatsMemory }}</strong>:
                 </p>
                 <ul>
                     <li>
@@ -102,9 +102,7 @@ import CTA from '../components/CTA.vue';
                 </ul>
 
                 <h2>Relationships</h2>
-                <p>
-                    Perhaps the most important part; how does Lyrcs save relationships? This is much harder to come up with an assumption for but here are some examples:
-                </p>
+                <p>Perhaps the most important part; how does Lyrcs save relationships? This is much harder to come up with an assumption for but here are some examples:</p>
                 <ul>
                     <li>
                         Your top line singer gets frustrated with how long it takes you to come up with new lyrics. They don't want to hear that your slow internet connection is what's to blame and decides to never work with you again.
@@ -132,6 +130,7 @@ import CTA from '../components/CTA.vue';
 
 <script>
 export default {
-    inject: ["konstantStatsMinutes", "konstantStatsMemory", "konstantStatsRelationships"]
+    inject: ["konstantStatsMinutes", "konstantStatsMemory"]
 }
 </script>
+
