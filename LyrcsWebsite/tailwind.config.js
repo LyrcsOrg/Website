@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         'app-primary': '#9253bd',
+        'app-primary-hover': '#773D9E',
         'app-secondary': '#16c2bf'
       }
     },
@@ -16,3 +17,5 @@ module.exports = {
     require('@tailwindcss/typography'),
   ],
 }
+
+// TODO: ButtonTertiary

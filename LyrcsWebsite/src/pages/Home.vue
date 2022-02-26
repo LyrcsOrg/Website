@@ -12,7 +12,7 @@ import Testimonial from '../components/Testimonial.vue'
 <template>
     <Hero />
     <MainFeatures />
-    <Testimonial />
+    <!-- <Testimonial /> -->
     <Stats title="What could Lyrcs save you per album?" subtitle="<a href='#/savings' class='underline'>Check out how we came up with the figures</a>." />
     <FeatureList />
     <ComingSoonApps />

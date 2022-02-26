@@ -11,6 +11,8 @@ import Competitors from './pages/Competitors.vue'
 import NotFound from './pages/NotFound.vue'
 
 const routeSupport = '/support'
+const routeSavings = '/savings'
+const routeCompetitors = '/competitors'
 
 const routes = [
     {
@@ -28,7 +30,7 @@ const routes = [
         }
     },
     {
-        path: '/savings',
+        path: routeSavings,
         component: Savings,
         meta: {
             title: "Savings"
@@ -43,7 +45,7 @@ const routes = [
         }
     },
     { 
-        path: '/competitors', 
+        path: routeCompetitors, 
         component: Competitors,
         meta: {
             title: "Competitors"
@@ -81,6 +83,8 @@ app.provide("konstantStatsRelationships", "1+")
 app.provide("konstantEmail", "support@lyrcs.app")
 app.provide("konstantAppStoreURL", "https://apps.apple.com/app/apple-store/id1599888045?pt=117831961&ct=website&mt=8")
 app.provide("konstantNavigationSupport", routeSupport)
+app.provide("konstantNavigationSavings", routeSavings)
+app.provide("konstantNavigationCompetitors", routeCompetitors)
 app.provide("konstantContactForm", "https://share-eu1.hsforms.com/15bmb0uVjTHqMEOoRBfhkygf8pdx")
 // global prop
 

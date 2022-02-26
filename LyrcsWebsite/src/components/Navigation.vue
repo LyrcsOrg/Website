@@ -50,7 +50,7 @@
                                     class="font-medium text-gray-500 hover:text-gray-900"
                                 >{{ item.name }}</a>-->
                             </div>
-                            <div
+                            <!-- <div
                                 class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0"
                             >
                                 <span class="inline-flex rounded-md shadow">
@@ -60,6 +60,11 @@
                                         class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-app-primary bg-white hover:bg-gray-200"
                                     >{{ cta }}</a>
                                 </span>
+                            </div>-->
+                            <div
+                                class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0"
+                            >
+                                <ButtonPrimary title="Download" :href="this.konstantAppStoreURL" />
                             </div>
                         </nav>
                     </div>
@@ -124,22 +129,29 @@
 <script>
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
+import ButtonPrimary from './ButtonPrimary.vue'
 
 export default {
-    inject: ["konstantAppStoreURL", "konstantNavigationSupport"],
+    inject: [
+        "konstantAppStoreURL",
+        "konstantNavigationSupport",
+        "konstantNavigationSavings",
+        "konstantNavigationCompetitors"
+    ],
     components: {
         Popover,
         PopoverButton,
         PopoverPanel,
         MenuIcon,
         XIcon,
+        ButtonPrimary
     },
     data() {
         return {
             navigation: [
                 { name: 'Support', href: this.konstantNavigationSupport },
-                { name: 'Savings', href: '/savings' },
-                // { name: 'Competitors', href: '/competitors' } 
+                { name: 'Savings', href: this.konstantNavigationSavings },
+                // { name: 'Competitors', href: this.konstantNavigationCompetitors } 
             ],
             cta: "Download"
         }

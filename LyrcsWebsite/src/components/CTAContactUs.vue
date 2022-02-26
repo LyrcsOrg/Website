@@ -8,12 +8,13 @@
                         <span class="block">Want to get in contact?</span>
                     </h2>
                     <p
-                        class="mt-4 text-lg leading-6 text-white"
+                        class="mt-4 mb-8 text-lg leading-6 text-white"
                     >We're a friendly bunch at Lyrcs so send us a message and we'll get back to you as soon as possible.</p>
-                    <a
+                    <!-- <a
                         :href="link"
                         class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-app-primary bg-white hover:bg-gray-200 sm:w-auto"
-                    >{{ cta }}</a>
+                    >{{ cta }}</a> -->
+                    <ButtonPrimary title="Send Message" :href="this.konstantContactForm" />
                 </div>
             </div>
         </div>
@@ -21,6 +22,7 @@
 </template>
 
 <script>
+import ButtonPrimary from './ButtonPrimary.vue'
 
 const navigation = [
     { name: 'Support', href: '/support' },
@@ -29,10 +31,12 @@ const navigation = [
 
 export default {
     inject: ["konstantContactForm"],
+    components: {
+        ButtonPrimary
+    },
     data() {
         return {
-            link: `${this.konstantContactForm}`,
-            cta: `Send Message`
+            link: `${this.konstantContactForm}`
         }
     },
 }
