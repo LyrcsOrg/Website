@@ -10,8 +10,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - name: Build
+      run: |
+        set -e \
+        npm run build
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.8
       with:
         branch: gh-pages
-        folder: src/release
+        folder: dist
