@@ -1,1 +1,0 @@
-Built in rhyme dictionary giving you instant rhymes as you type. No more pausing your workflow to open up rhymezone 😉.
