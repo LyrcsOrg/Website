@@ -9,8 +9,7 @@
         <div class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6">
           <div class="text-center">
             <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
-              <span class="block">{{ header.title }}</span>
-              <span class="block text-white">{{ header.titleImpact}}</span>
+              <span class="block" v-html="header.title"></span>
             </h1>
             <p class="mt-3 max-w-md mx-auto text-base text-white sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">{{ header.subtitle}}</p>
           </div>
@@ -62,8 +61,7 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 
 const header = {
-  title: "Song writing has",
-  titleImpact: "never been easier.",
+  title: "The Best Kept Secret<br>of Every Song Writer",
   subtitle: "Lyrcs is the single tool that empowers you to do what you do best - tell stories through music. Made for songwriters, by songwriters.",
   cta: "Download",
   footnote: "Work side by side with all your favorite tools and more"

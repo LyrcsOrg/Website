@@ -1,9 +1,5 @@
 <script setup>
-import FAQ from '@/components/FAQ.vue'
-import KeyboardShortcuts from '@/components/KeyboardShortcuts.vue'
 import PageTitle from '@/components/PageTitle.vue';
-import Footer from '@/components/Footer.vue';
-import SectionTitle from '../components/SectionTitle.vue';
 </script>
 
 <template>
@@ -28,7 +24,7 @@ import SectionTitle from '../components/SectionTitle.vue';
                     </li>
                 </ul>
                 <p>
-                    If you have any question, see the <router-link :to="konstantNavigationSupport">support</router-link> page to get in contact.
+                    If you have any question, feel free to <router-link :to="konstantRouteContact">contact us</router-link>.
                 </p>
             </div>
         </div>
@@ -38,6 +34,8 @@ import SectionTitle from '../components/SectionTitle.vue';
 <script>
 
 export default {
-    inject: ["konstantNavigationSupport"]
+    inject: [
+        "konstantRouteContact"
+    ]
 }
 </script>

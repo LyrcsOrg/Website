@@ -1,5 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
+  <PageTitle title="Frequently Asked Questions"></PageTitle>
   <div class="bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <dl class="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-10">
@@ -13,8 +14,16 @@
 </template>
 
 <script>
+import PageTitle from '../components/PageTitle.vue';
+
 export default {
-  inject: ["konstantContactForm"],
+  inject: [
+    "konstantContactForm",
+    "konstantRouteContact"
+  ],
+  components: {
+    PageTitle
+  },
   data() {
     return {
       faqs: [
@@ -26,7 +35,7 @@ export default {
         {
           question: "Can you implement X feature?",
           answer:
-            `<a href='${this.konstantContactForm}' class='underline'>Send a message</a> and we'll see what we can do.`,
+            `<a href='#${this.konstantRouteContact}' class='underline'>Contact us</a> and we'll see what we can do.`,
         }
       ]
     }

@@ -24,7 +24,7 @@
                     </div>
                     <div class="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
                         <ButtonSecondary title="Back to Home" href="#" />
-                        <ButtonTertiary title="Contact Support" :href="`#${this.konstantNavigationSupport}`" />
+                        <ButtonTertiary title="Contact Us" :href="`#${this.konstantRouteContact}`" />
                         
                     </div>
                 </div>
@@ -38,7 +38,7 @@ import ButtonSecondary from "../components/ButtonSecondary.vue"
 import ButtonTertiary from "../components/ButtonTertiary.vue"
 
 export default {
-    inject: ["konstantNavigationSupport"],
+    inject: ["konstantRouteContact"],
     components: {
         ButtonSecondary,
         ButtonTertiary

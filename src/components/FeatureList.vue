@@ -29,49 +29,50 @@ const header = {
   subtitle: "Here are a few more things we think you'll love."
 }
 
-const features = [
-  {
-    name: 'Keyboard Shortcuts',
-    description: "View them <a href='#/support' class='underline'>here</a>.",
-  },
-  {
-    name: 'Ad-Free',
-    description: "You won't find a single one.",
-  },
-  {
-    name: 'Plain Text Files',
-    description: 'No sneaky proprietary files to lock you in.',
-  },
-  {
-    name: 'Constant Updates',
-    description: 'Lyrcs is always receiving new features, enhancements or fixes.',
-  },
-  {
-    name: 'Work Offline',
-    description: "No need to be connected to the internet to use.",
-  },
-  {
-    name: 'Appearance Override',
-    description: "Choose between dark or light mode, or match your system.",
-  },
-  {
-    name: 'Distractionless Options',
-    description: 'When you want to really focus, hide the syllable and rhyme panels.',
-  },
-  {
-    name: 'Font Choices',
-    description: "Prefer to write in Times New Roman? Lyrcs won't hold you back.",
-  },
-]
-
 export default {
+  inject: [
+    "konstantRouteKeyboardShortcuts"
+  ],
   components: {
     CheckIcon,
   },
-  setup() {
+  data() {
     return {
       header,
-      features,
+      features: [
+        {
+          name: 'Keyboard Shortcuts',
+          description: `View them <a href='#${this.konstantRouteKeyboardShortcuts}' class='underline'>here</a>.`,
+        },
+        {
+          name: 'Ad-Free',
+          description: "You won't find a single one.",
+        },
+        {
+          name: 'Plain Text Files',
+          description: 'No sneaky proprietary files to lock you in.',
+        },
+        {
+          name: 'Constant Updates',
+          description: 'Lyrcs is always receiving new features, enhancements or fixes.',
+        },
+        {
+          name: 'Work Offline',
+          description: "No need to be connected to the internet to use.",
+        },
+        {
+          name: 'Appearance Override',
+          description: "Choose between dark or light mode, or match your system.",
+        },
+        {
+          name: 'Distractionless Options',
+          description: 'When you want to really focus, hide the syllable and rhyme panels.',
+        },
+        {
+          name: 'Font Choices',
+          description: "Prefer to write in Times New Roman? Lyrcs won't hold you back.",
+        },
+      ]
     }
   },
 }

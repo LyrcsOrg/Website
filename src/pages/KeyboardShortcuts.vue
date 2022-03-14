@@ -1,5 +1,5 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
 <template>
+    <PageTitle title="Keyboard Shortcuts"></PageTitle>
     <div class="bg-white">
         <div class="max-w-7xl mx-auto px-4 divide-y divide-gray-200 sm:px-6 lg:px-8">
             <dl class="divide-y divide-gray-200">
@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import PageTitle from '../components/PageTitle.vue'
+
 const faqs = [
     {
         question: "Toggle Rhyme Panel",
@@ -54,6 +56,9 @@ const faqs = [
 ]
 
 export default {
+    components: {
+        PageTitle
+    },
     setup() {
         return {
             faqs,

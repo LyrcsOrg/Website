@@ -133,10 +133,7 @@ import ButtonPrimary from './ButtonPrimary.vue'
 
 export default {
     inject: [
-        "konstantAppStoreURL",
-        "konstantNavigationSupport",
-        "konstantNavigationSavings",
-        "konstantNavigationCompetitors"
+        "konstantAppStoreURL"
     ],
     components: {
         Popover,
@@ -149,8 +146,6 @@ export default {
     data() {
         return {
             navigation: [
-                { name: 'Support', href: this.konstantNavigationSupport },
-                { name: 'Savings', href: this.konstantNavigationSavings },
                 // { name: 'Competitors', href: this.konstantNavigationCompetitors } 
             ],
             cta: "Download"

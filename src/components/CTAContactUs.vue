@@ -1,7 +1,7 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
     <div class="bg-white pt-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl py-16 mx-auto px-4 sm:px-6 lg:px-8">
             <div class="rounded-lg bg-gradient-to-r from-app-primary to-app-secondary">
                 <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
                     <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
@@ -23,11 +23,6 @@
 
 <script>
 import ButtonPrimary from './ButtonPrimary.vue'
-
-const navigation = [
-    { name: 'Support', href: '/support' },
-    { name: 'Savings', href: '/savings' }
-]
 
 export default {
     inject: ["konstantContactForm"],

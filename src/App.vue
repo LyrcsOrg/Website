@@ -1,7 +1,12 @@
 <template>
-  <Navigation></Navigation>
-  <router-view></router-view>
-  <Footer />
+  <!-- sticky footer: https://stackoverflow.com/a/65599498/4698501 -->
+  <div class="flex flex-col h-screen">
+    <Navigation />
+    <div class="flex-grow">
+      <router-view />
+    </div>
+    <Footer />
+  </div>
 </template>
 
 <script>

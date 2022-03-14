@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Doesn't work when using `script scoped` in Footer component */
+.formkit-form[data-uid="9f57de5059"][min-width~="700"] [data-style="clean"], .formkit-form[data-uid="9f57de5059"][min-width~="800"] [data-style="clean"] {
+    padding: 0 !important;
+}
