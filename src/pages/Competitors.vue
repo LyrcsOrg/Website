@@ -2,6 +2,9 @@
 import PageTitle from '../components/PageTitle.vue';
 </script>
 
+// TODO: potential: "Is Lyrcs the first app that assists in lyric writing? Certainly not, but is it the first that offers everything in the one app? You be the judge."
+// Show screenshot of competitors, iframe?
+
 <template>
     <PageTitle title="Competitors"></PageTitle>
     <div class="bg-white">

@@ -22,7 +22,7 @@
           <div class="flex-1 w-full bg-gray-800" />
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-          <img class="relative rounded-lg shadow-lg" src="@/assets/hero.png" alt="App screenshot" />
+          <img class="relative rounded-lg" src="@/assets/hero.png" alt="App screenshot" />
         </div>
       </div>
     </div>
