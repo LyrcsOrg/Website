@@ -61,7 +61,7 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 
 const header = {
-  title: "The Best Kept Secret<br>of Every Song Writer",
+  title: "The Best Kept Secret<br>of Every Songwriter",
   subtitle: "Lyrcs is the single tool that empowers you to do what you do best - tell stories through music. Made for songwriters, by songwriters.",
   cta: "Download",
   footnote: "Work side by side with all your favorite tools and more"

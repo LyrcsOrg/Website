@@ -40,7 +40,7 @@ export default {
                 {
                     question: "Tagline",
                     answer:
-                        "The Best Kept Secret of Every Song Writer",
+                        "The Best Kept Secret of Every Songwriter",
                 },
                 {
                     question: "Description",
