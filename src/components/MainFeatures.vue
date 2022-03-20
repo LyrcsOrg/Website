@@ -12,7 +12,7 @@
       <div v-for="(item, index) in features" :key="item.title" class="relative mt-12 sm:mt-16 lg:mt-24">
         <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
           <div
-            :class="{ 'lg:col-start-1': index % 2 === 0, 'lg:col-start-2': index % 2 !== 0 }"
+            :class="{ 'lg:col-start-1': index % 2 !== 0, 'lg:col-start-2': index % 2 === 0 }"
           >
             <h3
               class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
@@ -36,7 +36,7 @@
 
           <div
             class="mt-10 -mx-4 relative lg:mt-0"
-            :class="{ 'lg:col-start-1': index % 2 !== 0, 'lg:col-start-2': index % 2 === 0 }"
+            :class="{ 'lg:col-start-1': index % 2 === 0, 'lg:col-start-2': index % 2 !== 0 }"
           >
             <img class="relative mx-auto" width="490" :src="item.image" alt />
           </div>
