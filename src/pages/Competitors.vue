@@ -1,14 +1,14 @@
-<script setup>
-import PageTitle from '../components/PageTitle.vue';
-</script>
-
-// TODO: potential: "Is Lyrcs the first app that assists in lyric writing? Certainly not, but is it the first that offers everything in the one app? You be the judge."
-// Show screenshot of competitors, iframe?
-
 <template>
     <PageTitle title="Competitors"></PageTitle>
+
     <div class="bg-white">
-        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
+        <div class="max-w-7xl mx-auto pb-16 px-4 sm:px-6 lg:pb-24 lg:px-8">
+            <div class="relative pb-16">
+                <p
+                    class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500"
+                >How does Lyrcs stack up against the other apps out there? Take a look at the following table to see what you're missing out from others.</p>
+            </div>
+
             <div class="flex flex-col">
                 <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -20,62 +20,76 @@ import PageTitle from '../components/PageTitle.vue';
                                             scope="col"
                                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                                         >Feature</th>
+
                                         <th
+                                            v-for="app in apps"
+                                            :key="app"
                                             scope="col"
                                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                                         >
-                                            <img
-                                                class="max-h-8"
-                                                src="@/assets/title.svg"
-                                                alt="Lyrcs"
-                                            />
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                        >
-                                            <img
-                                                class="max-h-8"
-                                                src="@/assets/rhymezone.png"
-                                                alt="Rhymezone"
-                                            />
+                                            <div class="flex flex-row items-center gap-x-2">
+                                                <img
+                                                    class="max-h-8"
+                                                    :src="app.image"
+                                                    :alt="app.name + ' App Icon'"
+                                                />
+                                                <div>{{ app.name }}</div>
+                                            </div>
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr
-                                        v-for="(person, personIdx) in people"
-                                        :key="person"
-                                        :class="personIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'"
+                                        v-for="(row, rowIdx) in rows"
+                                        :key="row"
+                                        :class="rowIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'"
                                     >
                                         <td
-                                            v-if="typeof person.header !== 'undefined'"
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-                                        >{{ person.header }}</td>
+                                            v-if="typeof row.header !== 'undefined'"
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900"
+                                        >{{ row.header }}</td>
 
                                         <td
-                                            v-if="typeof person.name !== 'undefined'"
+                                            v-if="typeof row.name !== 'undefined'"
                                             class="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
-                                        >- {{ person.name }}</td>
+                                        >- {{ row.name }}</td>
                                         <td
-                                            v-if="typeof person.lyrcs !== 'undefined'"
                                             class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
                                         >
                                             <!-- TODO: Handle screenreader -->
                                             <CheckIcon
-                                                v-if="person.lyrcs"
-                                                class="h-6 w-6 text-green-500"
+                                                v-if="row.lyrcs"
+                                                class="h-6 w-6 text-green-500 ml-1"
                                                 aria-hidden="true"
                                             />
                                         </td>
                                         <td
-                                            v-if="typeof person.rhymezone !== 'undefined'"
                                             class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
                                         >
                                             <!-- TODO: Handle screenreader -->
                                             <CheckIcon
-                                                v-if="person.rhymezone"
-                                                class="h-6 w-6 text-green-500"
+                                                v-if="row.songwriter"
+                                                class="h-6 w-6 text-green-500 ml-1"
+                                                aria-hidden="true"
+                                            />
+                                        </td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                                        >
+                                            <!-- TODO: Handle screenreader -->
+                                            <CheckIcon
+                                                v-if="row.comp"
+                                                class="h-6 w-6 text-green-500 ml-1"
+                                                aria-hidden="true"
+                                            />
+                                        </td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                                        >
+                                            <!-- TODO: Handle screenreader -->
+                                            <CheckIcon
+                                                v-if="row.block"
+                                                class="h-6 w-6 text-green-500 ml-1"
                                                 aria-hidden="true"
                                             />
                                         </td>
@@ -88,38 +102,61 @@ import PageTitle from '../components/PageTitle.vue';
             </div>
         </div>
     </div>
-    <!-- TODO: table -->
 </template>
 
 <script>
+import PageTitle from '../components/PageTitle.vue'
 import { CheckIcon } from '@heroicons/vue/outline'
+import LogoLyrcs from '@/assets/logo.svg'
+import LogoSongwriter from '@/assets/songwriter.webp'
+import LogoSongwritersCompanion from '@/assets/songwriters-companion.webp'
+import LogoBlock from '@/assets/block.png'
 
-const people = [
+// TODO: potential: "Is Lyrcs the first app that assists in lyric writing? Certainly not, but is it the first that offers everything in the one app? You be the judge."
+// Show screenshot of competitors, iframe?
 
-    { header: 'Editor', lyrcs: true, rhymezone: false },
-    { name: 'Insert Rhymes Directly', lyrcs: true, rhymezone: false },
-    { header: 'Rhyme Search', lyrcs: true, rhymezone: true },
-    { name: 'Offline Results', lyrcs: true, rhymezone: true },
-    { name: 'Result Grouping', lyrcs: true, rhymezone: true },
-    { header: 'Syllable Counting', lyrcs: true, rhymezone: false },
-    { name: 'Per Line', lyrcs: true, rhymezone: false },
-    { name: 'Per Selection', lyrcs: true, rhymezone: false },
-    { name: 'Override Syllable Count', lyrcs: true, rhymezone: false },
-    { header: 'UI', lyrcs: true, rhymezone: false },
-    { name: 'Dark Mode', lyrcs: true, rhymezone: false },
-    { name: 'Font Adjustable', lyrcs: true, rhymezone: false },
-    { header: 'Native macOS', lyrcs: true, rhymezone: true },
-    { name: 'Spelling and Grammer Checking', lyrcs: true, rhymezone: true },
-    
+const apps = [
+    { name: "Lyrcs", image: LogoLyrcs },
+    { name: "Songwriter", image: LogoSongwriter },
+    { name: "Songwriter's Companion", image: LogoSongwritersCompanion },
+    { name: "Rhymer's Block", image: LogoBlock },
+]
+
+const rows = [
+    { header: 'App' },
+    { name: 'Free', lyrcs: true, songwriter: false, comp: false, block: false },
+    { header: 'Rhyme Search' },
+    { name: 'Available', lyrcs: true, songwriter: false, comp: true, block: true },
+    { name: 'Insert in Editor', lyrcs: true, songwriter: false, comp: false, block: true },
+    { name: 'Offline Results', lyrcs: true, songwriter: false, comp: true, block: true },
+    { name: 'Grouping by Syllables', lyrcs: true, songwriter: false, comp: true, block: false },
+    { name: 'Grouping by Letters', lyrcs: true, songwriter: false, comp: false, block: false },
+    { header: 'Rhyme Highlighting' },
+    { name: 'Available', lyrcs: true, songwriter: false, comp: false, block: true },
+    { name: 'Real-time', lyrcs: true, songwriter: false, comp: false, block: true },
+    { header: 'Syllable Counting' },
+    { name: 'Available', lyrcs: true, songwriter: false, comp: false, block: false },
+    { name: 'Per Line', lyrcs: true, songwriter: false, comp: false, block: false },
+    { name: 'Per Selection', lyrcs: true, songwriter: false, comp: false, block: false },
+    { name: 'Override Syllable Count', lyrcs: true, songwriter: false, comp: false, block: false },
+    { header: 'UI' },
+    { name: 'System Appearance', lyrcs: true, songwriter: false, comp: true, block: true },
+    { name: 'Override Appearance', lyrcs: true, songwriter: false, comp: false, block: true },
+    { name: 'Font Adjustable', lyrcs: true, songwriter: false, comp: true, block: true },
+    { name: 'Native macOS App', lyrcs: true, songwriter: false, comp: true, block: false },
+    { name: 'Spelling and Grammer Checking', lyrcs: true, songwriter: true, comp: true, block: true },
+    { name: 'Plain Text Files', lyrcs: true, songwriter: false, comp: true, block: true },
 ]
 
 export default {
     components: {
         CheckIcon,
+        PageTitle
     },
     setup() {
         return {
-            people,
+            rows,
+            apps
         }
     },
 }

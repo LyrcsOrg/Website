@@ -126,7 +126,8 @@ export default {
         "konstantRouteKeyboardShortcuts",
         "konstantRouteFAQ",
         "konstantRoutePrivacy",
-        "konstantRoutePressKit"
+        "konstantRoutePressKit",
+        "konstantRouteCompetitors"
     ],
     data() {
         return {
@@ -145,6 +146,7 @@ export default {
                 ],
                 marketing: [
                     { name: 'Press Kit', href: this.konstantRoutePressKit },
+                    { name: 'Competitors', href: this.konstantRouteCompetitors },
                 ],
                 legal: [
                     { name: 'Privacy', href: this.konstantRoutePrivacy }

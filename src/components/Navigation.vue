@@ -146,7 +146,7 @@ export default {
     data() {
         return {
             navigation: [
-                // { name: 'Competitors', href: this.konstantNavigationCompetitors } 
+                
             ],
             cta: "Download"
         }
