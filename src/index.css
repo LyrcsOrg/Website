@@ -3,6 +3,25 @@
 @tailwind utilities;
 
 /* Doesn't work when using `script scoped` in Footer component */
-.formkit-form[data-uid="9f57de5059"][min-width~="700"] [data-style="clean"], .formkit-form[data-uid="9f57de5059"][min-width~="800"] [data-style="clean"] {
+.formkit-form[data-uid="9f57de5059"][min-width~="700"] [data-style="clean"],
+.formkit-form[data-uid="9f57de5059"][min-width~="800"] [data-style="clean"] {
     padding: 0 !important;
+}
+
+.home-competitors {
+    max-height: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    content: "";
+    position: relative;
+}
+
+.home-competitors:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(transparent 100px, white);
 }
