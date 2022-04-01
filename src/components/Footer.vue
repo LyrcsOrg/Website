@@ -127,7 +127,8 @@ export default {
         "konstantRouteFAQ",
         "konstantRoutePrivacy",
         "konstantRoutePressKit",
-        "konstantRouteCompetitors"
+        "konstantRouteCompetitors",
+        "konstantIssues"
     ],
     data() {
         return {
@@ -143,6 +144,7 @@ export default {
                     { name: 'FAQ', href: this.konstantRouteFAQ },
                     { name: 'Keyboard Shortcuts', href: this.konstantRouteKeyboardShortcuts },
                     { name: 'Contact Us', href: this.konstantRouteContact },
+                    { name: 'Bug Report or Feature Request', href: this.konstantIssues }
                 ],
                 marketing: [
                     { name: 'Press Kit', href: this.konstantRoutePressKit },

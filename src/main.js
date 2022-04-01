@@ -20,6 +20,7 @@ const routeContact = '/contact'
 const routeFAQ = '/faq'
 const routePrivacy = '/privacy'
 const routePressKit = '/press-kit'
+const routeIssues = '/issues'
 
 const routes = [
     {
@@ -37,22 +38,22 @@ const routes = [
         }
 
     },
-    { 
-        path: routePrivacy, 
+    {
+        path: routePrivacy,
         component: Privacy,
         meta: {
             title: "Privacy"
         }
     },
-    { 
-        path: routeCompetitors, 
+    {
+        path: routeCompetitors,
         component: Competitors,
         meta: {
             title: "Competitors"
         }
     },
-    { 
-        path: '/:pathMatch(.*)*', 
+    {
+        path: '/:pathMatch(.*)*',
         component: NotFound,
         meta: {
             title: "Page Not Found"
@@ -84,6 +85,14 @@ const routes = [
         component: PressKit,
         meta: {
             title: "Press Kit"
+        }
+    },
+    {
+        path: routeIssues,
+        // https://stackoverflow.com/a/50633229/4698501
+        beforeEnter() {
+            // https://stackoverflow.com/q/4907843/4698501
+            window.open('https://github.com/LyrcsOrg/Issues');
         }
     }
 ]
@@ -118,8 +127,7 @@ app.provide("konstantRouteKeyboardShortcuts", routeKeyboardShortcuts)
 app.provide("konstantRouteFAQ", routeFAQ)
 app.provide("konstantRoutePrivacy", routePrivacy)
 app.provide("konstantRoutePressKit", routePressKit)
-
-// global prop
+app.provide("konstantIssues", routeIssues)
 
 // TODO: every time Lyrcs appears, format with custom font.
 
