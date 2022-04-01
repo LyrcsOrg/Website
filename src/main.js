@@ -129,6 +129,12 @@ app.provide("konstantRoutePrivacy", routePrivacy)
 app.provide("konstantRoutePressKit", routePressKit)
 app.provide("konstantIssues", routeIssues)
 
+app.provide("konstantTwitter", "https://twitter.com/LyrcsApp")
+app.provide("konstantGithub", "https://github.com/LyrcsOrg")
+app.provide("konstantFacebook", "https://www.facebook.com/LyrcsApp/")
+app.provide("konstantInstagram", "https://www.instagram.com/lyrcs.app/")
+app.provide("konstantLinkedIn", "https://www.linkedin.com/company/lyrcs/")
+
 // TODO: every time Lyrcs appears, format with custom font.
 
 app.mount('#app')
