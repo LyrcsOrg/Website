@@ -8,12 +8,14 @@
     padding: 0 !important;
 }
 
+/* Convert to tailwind */
 .home-competitors {
     max-height: 300px;
     overflow: hidden;
     text-overflow: ellipsis;
     content: "";
     position: relative;
+    padding: 20px;
 }
 
 .home-competitors:before {
