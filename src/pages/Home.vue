@@ -17,6 +17,6 @@ import HomeCompetitors from '../components/HomeCompetitors.vue'
     <Stats title="What could Lyrcs save you per album?" subtitle="<a href='#/savings' class='underline'>Check out how we came up with the figures</a>." />
     <FeatureList />
     <HomeCompetitors />
-    <ComingSoonApps />
     <CTA />
+    <ComingSoonApps />
 </template>

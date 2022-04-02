@@ -7,6 +7,22 @@
 .formkit-form[data-uid="9f57de5059"][min-width~="800"] [data-style="clean"] {
     padding: 0 !important;
 }
+.formkit-form[data-uid="71274de90f"] {
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.formkit-form[data-uid="71274de90f"] legend {
+    display: none !important;
+}
+
+.formkit-form[data-uid="71274de90f"] fieldset {
+    display: flex !important;
+}
+
+.formkit-form[data-uid="71274de90f"] .formkit-checkboxes {
+    padding-right: 8pt;
+}
 
 /* Convert to tailwind */
 .home-competitors {
