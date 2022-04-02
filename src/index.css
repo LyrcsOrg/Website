@@ -29,6 +29,11 @@
     display: flex !important;
 }
 
+.formkit-form[data-uid="71274de90f"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"]:checked + label::before {
+    background-color: #9253BD !important;
+    border-color: #6A3C8A !important;
+}
+
 @media only screen and (min-width: 600px) {
     .formkit-form[data-uid="71274de90f"] .formkit-checkboxes {
         padding-right: 30pt;
