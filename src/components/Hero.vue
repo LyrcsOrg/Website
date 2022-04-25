@@ -62,7 +62,7 @@ import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 
 const header = {
   title: "The Best Kept Secret<br>of Every Songwriter",
-  subtitle: "Lyrcs is the single tool that empowers you to do what you do best - tell stories through music. Made for songwriters, by songwriters.",
+  subtitle: "Lyrcs is a syllable counting, rhyme searching and rhyme highlighting tool to help you write songs faster than ever before.",
   cta: "Download",
   footnote: "Work side by side with all your favorite tools and more"
 }

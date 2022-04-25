@@ -1,5 +1,5 @@
 <script setup>
-import Hero from '@/components/Hero.vue'
+import Hero from '../components/Hero.vue'
 import MainFeatures from '../components/MainFeatures.vue'
 import FeatureList from '../components/FeatureList.vue'
 import CTA from '../components/CTA.vue'
