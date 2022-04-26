@@ -14,9 +14,9 @@ import HomeCompetitors from '../components/HomeCompetitors.vue'
     <Hero />
     <MainFeatures />
     <!-- <Testimonial /> -->
-    <Stats title="What could Lyrcs save you per album?" subtitle="<a href='#/savings' class='underline'>Check out how we came up with the figures</a>." />
-    <FeatureList />
+    <Stats title="What could Lyrcs save you per album?" subtitle="Check out how we <a href='#/savings' class='underline'>came up with the figures</a>." />
     <HomeCompetitors />
+    <FeatureList />
     <CTA />
     <ComingSoonApps />
 </template>

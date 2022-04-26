@@ -13,7 +13,7 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="max-w-4xl mx-auto">
             <dl
-              class="rounded-lg bg-white drop-shadow-[0_0_8px_rgba(0,0,0,0.25)] sm:grid sm:grid-cols-3"
+              class="rounded-lg bg-white drop-shadow-default sm:grid sm:grid-cols-3"
             >
               <div
                 class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r"

@@ -52,6 +52,11 @@ const faqs = [
         answer:
             "⌘ T",
     },
+    {
+        question: "Print",
+        answer:
+            "⌘ P",
+    },
     // More questions...
 ]
 

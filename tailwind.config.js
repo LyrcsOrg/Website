@@ -9,6 +9,9 @@ module.exports = {
         'app-primary': '#9253bd',
         'app-primary-hover': '#773D9E',
         'app-secondary': '#16c2bf'
+      },
+      dropShadow: {
+        'default': '0 0 15px rgba(0, 0, 0, 0.08)',
       }
     },
   },

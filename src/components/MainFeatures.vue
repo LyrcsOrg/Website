@@ -3,28 +3,22 @@
   <div class="py-16 bg-white overflow-hidden lg:py-24">
     <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
       <div class="relative">
-        <h2
-          class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-        >{{ header.title }}</h2>
+        <h2 class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">{{
+          header.title
+        }}</h2>
         <p class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">{{ header.subtitle }}</p>
       </div>
 
       <div v-for="(item, index) in features" :key="item.title" class="relative mt-12 sm:mt-16 lg:mt-24">
         <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
-          <div
-            :class="{ 'lg:col-start-1': index % 2 !== 0, 'lg:col-start-2': index % 2 === 0 }"
-          >
-            <h3
-              class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
-            >{{ item.title }}</h3>
+          <div :class="{ 'lg:col-start-1': index % 2 !== 0, 'lg:col-start-2': index % 2 === 0 }">
+            <h3 class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">{{ item.title }}</h3>
             <p class="mt-3 text-lg text-gray-500">{{ item.subtitle }}</p>
 
             <dl class="mt-10 space-y-10">
               <div v-for="item in item.details" :key="item.name" class="relative">
                 <dt>
-                  <div
-                    class="absolute flex items-center justify-center h-10 w-10 rounded-md bg-app-primary text-white"
-                  >
+                  <div class="absolute flex items-center justify-center h-10 w-10 rounded-md bg-app-primary text-white">
                     <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                   </div>
                   <p class="ml-16 text-lg leading-6 font-medium text-gray-900">{{ item.name }}</p>
@@ -34,11 +28,9 @@
             </dl>
           </div>
 
-          <div
-            class="mt-10 -mx-4 relative lg:mt-0"
-            :class="{ 'lg:col-start-1': index % 2 === 0, 'lg:col-start-2': index % 2 !== 0 }"
-          >
-            <img class="relative mx-auto" width="490" :src="item.image" alt />
+          <div class="mt-10 -mx-4 relative lg:mt-0"
+            :class="{ 'lg:col-start-1': index % 2 === 0, 'lg:col-start-2': index % 2 !== 0 }">
+            <img class="relative mx-auto rounded-2xl drop-shadow-default" width="490" :src="item.image" alt />
           </div>
         </div>
       </div>
@@ -47,13 +39,32 @@
 </template>
 
 <script>
-import { MenuIcon, ShareIcon, BackspaceIcon, CheckIcon, PlusIcon, MoonIcon, DesktopComputerIcon, PencilIcon, CursorClickIcon, ViewListIcon, ClipboardCopyIcon, ClockIcon, LightningBoltIcon, EyeIcon, ClipboardListIcon } from '@heroicons/vue/outline'
-import ScreenshotRhymes from '@/assets/rhymes.png'
-import ScreenshotSyllables from '@/assets/syllables.png'
-import ScreenshotDesign from '@/assets/design.png'
-import ScreenshotSpelling from '@/assets/spelling.png'
-import ScreenshotHighlight from '../assets/highlight.png'
-
+import {
+  MenuIcon,
+  ShareIcon,
+  BackspaceIcon,
+  CheckIcon,
+  PlusIcon,
+  MoonIcon,
+  DesktopComputerIcon,
+  PencilIcon,
+  CursorClickIcon,
+  ViewListIcon,
+  ClipboardCopyIcon,
+  ClockIcon,
+  LightningBoltIcon,
+  EyeIcon,
+  ClipboardListIcon,
+  DocumentIcon,
+  DocumentTextIcon,
+  LightBulbIcon
+} from '@heroicons/vue/outline'
+import ScreenshotRhymes from '../assets/features/rhymes.png'
+import ScreenshotSyllables from '../assets/features/syllables.png'
+import ScreenshotDesign from '../assets/features/design.png'
+import ScreenshotSpelling from '../assets/features/spelling.png'
+import ScreenshotHighlight from '../assets/features/highlight.png'
+import ScreenshotPrinting from '../assets/features/printing.png'
 
 const header = {
   title: "Why You'll Love Lyrcs",
@@ -120,24 +131,24 @@ const features = [
         name: "Real-time",
         description:
           'No pushing a button to turn it on, rhymes are calculated blazingly fast in the background as you type.',
-          icon: LightningBoltIcon
+        icon: LightningBoltIcon
       },
       {
         name: "Color Blindness",
         description:
           `The 20 most distinct colors are used to improve accessibility. If you have any trouble consider turning on macOS Color Filters.`,
-          icon: EyeIcon
+        icon: EyeIcon
       },
       {
         name: "Identical Words",
         description:
           'Sometimes when life gives you orange, you just have to orange again. Toggle the option to highlight identical words.',
-          icon: ClipboardListIcon
+        icon: ClipboardListIcon
       }
     ]
   },
   {
-    title: "Fine Design",
+    title: "Delicious Design",
     subtitle: "Working late at night? Eyesight isn't what it used to be? Wish you could work without distractions? You're in good hands.",
     image: ScreenshotDesign,
     details: [
@@ -185,7 +196,32 @@ const features = [
         icon: ShareIcon,
       },
     ]
-  }
+  },
+  {
+    title: "Print Perfect",
+    subtitle: "Share your creations in hardcopy (or PDF for later).",
+    image: ScreenshotPrinting,
+    details: [
+      {
+        name: 'Page Format',
+        description:
+          "A3, B5, US Letter? Lyrcs doesn't discriminate.",
+        icon: DocumentIcon,
+      },
+      {
+        name: 'Text Properties',
+        description:
+          'Configure the text alignment and size to exactly the way you like it.',
+        icon: DocumentTextIcon,
+      },
+      {
+        name: 'Options',
+        description:
+          `Enable Show Syllables and Show Rhymes to keep those juicy numbers and colors.`,
+        icon: LightBulbIcon,
+      },
+    ]
+  },
 ]
 
 export default {
