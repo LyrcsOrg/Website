@@ -25,13 +25,13 @@ const faqs = [
     {
         question: "Toggle Rhyme Panel",
         answer:
-            "⌘ R",
+            "⌘ ⇧ R",
     },
-    // {
-    //     question: "Toggle Syllables",
-    //     answer:
-    //         "⌘ E",
-    // },
+    {
+        question: "Focus Rhyme Search Bar",
+        answer:
+            "⌘ R (rhyme panel must be opened)",
+    },
     {
         question: "Font Increase",
         answer:
@@ -56,8 +56,7 @@ const faqs = [
         question: "Print",
         answer:
             "⌘ P",
-    },
-    // More questions...
+    }
 ]
 
 export default {

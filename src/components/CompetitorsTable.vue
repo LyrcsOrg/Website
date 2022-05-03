@@ -123,6 +123,8 @@ const rows = [
     { name: 'Native macOS App', lyrcs: true, comp: true, block: false, songwriter: false },
     { name: 'Spell Check', lyrcs: true, comp: true, block: true, songwriter: true },
     { name: 'Plain Text Files', lyrcs: true, comp: true, block: true, songwriter: false },
+    // { header: 'Printing' },
+    // { name: 'Available', lyrcs: true, comp: true, block: true, songwriter: false },
     { header: 'App' },
     { name: 'Free', lyrcs: true, comp: false, block: false, songwriter: false },
 ]
