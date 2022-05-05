@@ -141,6 +141,7 @@ export default {
             navigation: {
                 research: [
                     { name: 'Savings', href: this.konstantNavigationSavings },
+                    { name: 'Competitors', href: this.konstantRouteCompetitors },
                     // Competitors
                     // { name: '-Analytics', href: '#' },
                     // { name: '-Commerce', href: '#' },
@@ -154,7 +155,6 @@ export default {
                 ],
                 marketing: [
                     { name: 'Press Kit', href: this.konstantRoutePressKit },
-                    { name: 'Competitors', href: this.konstantRouteCompetitors },
                 ],
                 legal: [
                     { name: 'Privacy', href: this.konstantRoutePrivacy }
