@@ -86,10 +86,10 @@
 
 <script>
 import { CheckIcon } from '@heroicons/vue/outline'
-import LogoLyrcs from '@/assets/logo.svg'
-import LogoSongwriter from '@/assets/songwriter.webp'
-import LogoSongwritersCompanion from '@/assets/songwriters-companion.webp'
-import LogoBlock from '@/assets/block.png'
+import LogoLyrcs from '@/assets/images/logo.svg'
+import LogoSongwriter from '@/assets/images/competitors_songwriter.webp'
+import LogoSongwritersCompanion from '@/assets/images/competitors_songwriters-companion.webp'
+import LogoBlock from '@/assets/images/competitors_block.webp'
 
 // TODO: potential: "Is Lyrcs the first app that assists in lyric writing? Certainly not, but is it the first that offers everything in the one app? You be the judge."
 // Show screenshot of competitors, iframe?

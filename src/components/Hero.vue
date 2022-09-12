@@ -22,7 +22,7 @@
           <div class="flex-1 w-full bg-gray-800" />
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-          <img class="relative" src="@/assets/hero.png" alt="App screenshot" />
+          <img class="relative" src="@/assets/images/hero.webp" alt="App screenshot" />
         </div>
       </div>
     </div>
@@ -31,23 +31,23 @@
         <h2 class="text-center text-gray-400 text-sm font-semibold uppercase tracking-wide">{{ header.footnote }}</h2>
         <div class="mt-8 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5 text-gray-400">
           <figure class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1 items-center space-x-2">
-            <img class="h-16" src="@/assets/daws/live.svg" alt="Ableton Live" />
+            <img class="h-16" src="@/assets/images/daws_live.svg" alt="Ableton Live" />
             <figcaption>Ableton Live</figcaption>
           </figure>
           <figure class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1 items-center space-x-2">
-            <img class="h-16" src="@/assets/daws/logic.svg" alt="Logic Pro" />
+            <img class="h-16" src="@/assets/images/daws_logic.svg" alt="Logic Pro" />
             <figcaption>Logic Pro</figcaption>
           </figure>
           <figure class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1 items-center space-x-2">
-            <img class="h-16" src="@/assets/daws/tools.svg" alt="Pro Tools" />
+            <img class="h-16" src="@/assets/images/daws_tools.svg" alt="Pro Tools" />
             <figcaption>Pro Tools</figcaption>
           </figure>
           <figure class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1 items-center space-x-2">
-            <img class="h-16" src="@/assets/daws/fl.svg" alt="FL Studio" />
+            <img class="h-16" src="@/assets/images/daws_fl.svg" alt="FL Studio" />
             <figcaption>FL Studio</figcaption>
           </figure>
           <figure class="col-span-2 flex justify-center md:col-span-3 lg:col-span-1 items-center space-x-2">
-            <img class="h-16" src="@/assets/daws/garage.svg" alt="GarageBand" />
+            <img class="h-16" src="@/assets/images/daws_garage.svg" alt="GarageBand" />
             <figcaption>GarageBand</figcaption>
           </figure>
         </div>

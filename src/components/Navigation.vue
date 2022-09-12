@@ -21,7 +21,7 @@
                                         <span class="sr-only">Lyrcs</span>
                                         <img
                                             class="h-8 w-auto sm:h-10"
-                                            src="@/assets/logo.svg"
+                                            src="@/assets/images/logo.svg"
                                             alt="Logo"
                                         />
                                     </a>
@@ -86,7 +86,7 @@
                             >
                                 <div class="px-5 pt-4 flex items-center justify-between">
                                     <div>
-                                        <img class="h-8 w-auto" src="@/assets/logo.svg" alt="Logo" />
+                                        <img class="h-8 w-auto" src="@/assets/images/logo.svg" alt="Logo" />
                                     </div>
                                     <div class="-mr-2">
                                         <PopoverButton

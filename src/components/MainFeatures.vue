@@ -59,12 +59,12 @@ import {
   DocumentTextIcon,
   LightBulbIcon
 } from '@heroicons/vue/outline'
-import ScreenshotRhymes from '../assets/features/rhymes.png'
-import ScreenshotSyllables from '../assets/features/syllables.png'
-import ScreenshotDesign from '../assets/features/design.png'
-import ScreenshotSpelling from '../assets/features/spelling.png'
-import ScreenshotHighlight from '../assets/features/highlight.png'
-import ScreenshotPrinting from '../assets/features/printing.png'
+import ScreenshotRhymes from '../assets/images/features_rhymes.webp'
+import ScreenshotSyllables from '../assets/images/features_syllables.webp'
+import ScreenshotDesign from '../assets/images/features_design.webp'
+import ScreenshotSpelling from '../assets/images/features_spelling.webp'
+import ScreenshotHighlight from '../assets/images/features_highlight.webp'
+import ScreenshotPrinting from '../assets/images/features_printing.webp'
 
 const header = {
   title: "Why You'll Love Lyrcs",
