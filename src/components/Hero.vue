@@ -22,7 +22,7 @@
           <div class="flex-1 w-full bg-gray-800" />
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-          <img class="relative" src="@/assets/images/hero.webp" alt="App screenshot" />
+          <img fetchpriority="high" class="relative" src="@/assets/images/hero.webp" alt="App screenshot" />
         </div>
       </div>
     </div>

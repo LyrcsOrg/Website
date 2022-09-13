@@ -30,7 +30,7 @@
 
           <div class="mt-10 -mx-4 relative lg:mt-0 px-4 sm:px-6 lg:px-8"
             :class="{ 'lg:col-start-1': index % 2 === 0, 'lg:col-start-2': index % 2 !== 0 }">
-            <img class="relative mx-auto rounded-2xl drop-shadow-default" width="490" :src="item.image" alt />
+            <img fetchpriority="low" class="relative mx-auto rounded-2xl drop-shadow-default" width="490" :src="item.image" alt />
           </div>
         </div>
       </div>
