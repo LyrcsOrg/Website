@@ -51,6 +51,16 @@
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics: End -->
 
+  <!-- webp polyfill https://github.com/chase-moskal/webp-hero -->
+  <script src="https://unpkg.com/webp-hero@0.0.2/dist-cjs/polyfills.js"></script>
+  <script src="https://unpkg.com/webp-hero@0.0.2/dist-cjs/webp-hero.bundle.js"></script>
+
+  <script>
+    var webpMachine = new webpHero.WebpMachine()
+    webpMachine.polyfillDocument()
+  </script>
+  <!-- End -->
+
   <title>Lyrcs</title>
 </head>
 
