@@ -1,83 +1,599 @@
-<!DOCTYPE html>
-<html dir="auto" lang="en" class="h-full">
-
-<head>
-  <meta charset="UTF-8" />
-
-  <!-- Favicon: Start-->
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/favicon/site.webmanifest">
-  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="/favicon/favicon.ico">
-  <meta name="apple-mobile-web-app-title" content="Lyrcs">
-  <meta name="application-name" content="Lyrcs">
-  <meta name="msapplication-TileColor" content="#2b5797">
-  <meta name="msapplication-config" content="/favicon/browserconfig.xml">
-  <meta name="theme-color" content="#9253bd">
-  <meta name="description"
-    content="Lyrcs is a syllable counting, rhyme searching and rhyme highlighting tool to help you write songs faster than ever before. Try it today and wonder how you ever lived without it!" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Favicon: End-->
-
-  <!-- Open Graph: Start -->
-  <meta property="og:url" content="https://lyrcs.app/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Lyrcs">
-  <meta property="og:description"
-  content="Lyrcs is a syllable counting, rhyme searching and rhyme highlighting tool to help you write songs faster than ever before. Try it today and wonder how you ever lived without it!" />
-  <meta property="og:image" content="https://lyrcs.app/opengraph.png">
-  <!-- Open Graph: End -->
-
-  <!-- Twitter Meta Tags: Start -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="lyrcs.app">
-  <meta property="twitter:url" content="https://lyrcs.app/">
-  <meta name="twitter:title" content="Lyrcs">
-  <meta name="twitter:description"
-  content="Lyrcs is a syllable counting, rhyme searching and rhyme highlighting tool to help you write songs faster than ever before. Try it today and wonder how you ever lived without it!" />
-  <meta name="twitter:image" content="https://lyrcs.app/opengraph.png">
-  <!-- Twitter Meta Tags: End -->
-
-  <!-- Global site tag (gtag.js) - Google Analytics: Start -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-02826S12RK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-02826S12RK');
-  </script>
-  <!-- Global site tag (gtag.js) - Google Analytics: End -->
-
-  <!-- webp polyfill https://github.com/chase-moskal/webp-hero -->
-  <script src="https://unpkg.com/webp-hero@0.0.2/dist-cjs/polyfills.js"></script>
-  <script src="https://unpkg.com/webp-hero@0.0.2/dist-cjs/webp-hero.bundle.js"></script>
-
-  <script>
-    var webpMachine = new webpHero.WebpMachine()
-    webpMachine.polyfillDocument()
-  </script>
-  <!-- End -->
-
-  <title>Lyrcs</title>
-  <script type="module" crossorigin src="/assets/index.63a31540.js"></script>
-  <link rel="stylesheet" href="/assets/index.580b9d93.css">
-</head>
-
-<body class="h-full">
-  <div id="app"></div>
-  
-
-  <!-- Start of HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25600389.js"></script>
-  <!-- End of HubSpot Embed Code -->
-
-  <!-- Start of HubSpot Contact Code -->
-  <!-- Replace `return this.props.noBrandingScope` with `return 1` -->
-  <script charset="utf-8" type="text/javascript" src="/scripts/hubspot/shell.js"></script>
-  <!-- End of HubSpot Contact Code -->
-</body>
-
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Lyrcs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="color-scheme" content="light only" />
+		<meta name="description" content="The only lyric writing app that highlights rhymes, counts syllables, accepts near rhymes, shows chords, organises sections and so much more." />
+		<meta property="og:site_name" content="Lyrcs" />
+		<meta property="og:title" content="Lyrcs" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="The only lyric writing app that highlights rhymes, counts syllables, accepts near rhymes, shows chords, organises sections and so much more." />
+		<meta name="apple-mobile-web-app-title" content="Lyrcs" />
+		<meta name="application-name" content="Lyrcs" />
+		<meta name="theme-color" content="#9252BC" />
+		<link href="https://fonts.googleapis.com/css2?display=swap&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900" rel="stylesheet" type="text/css" />
+		<link rel="icon" type="image/png" href="assets/images/favicon.png" />
+		<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+		<link rel="stylesheet" href="assets/main.css" />
+		<script async src="//www.googletagmanager.com/gtag/js?id=G-02826S12RK"></script>
+		<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-02826S12RK', { 'send_page_view': false, 'anonymize_ip': true });</script>
+		<!-- qweoqwupeoiqwuewqe --><style>
+		
+		/****************
+		VIDEO
+		****************/
+		
+		.video-border video {
+		box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 0px 10px 0 rgba(0, 0, 0, 0.1);
+		background-image: linear-gradient(135deg, #9253BD 0%, #16C2BF 50%);
+		padding: 10px;
+		border-radius: 20px;
+		}
+		
+		/****************
+		CONVERTKIT FORM
+		****************/
+		
+		/* Remove padding (especially top one) */
+		#form-notified div[data-style="clean"] {
+		padding: 0 !important;
+		}
+		
+		/* Adds a san-serif font to the labels */
+		#form-notified fieldset[data-group="checkboxes"] {
+		font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+		}
+		
+		/* Adds a san-serif font to the alerts */
+		#form-notified .formkit-alert {
+		font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+		}
+		
+		/* Hide ConvertKit Badge */
+		#form-notified .formkit-powered-by-convertkit-container {
+		display: none !important;
+		}
+		
+		/* Horizontall Center */
+		#form-notified form {
+		margin: 0 auto;
+		display: block;
+		}
+		
+		/* Checked color */
+		#form-notified input[type="checkbox"]:checked + label::before {
+		background-color: #9253BD !important;
+		border-color: #6A3C8A !important;
+		}
+		
+		/* Convert Kit Form */
+		/*fieldset {
+		display: flex;
+		flex-direction: row;
+		}
+		
+		legend {
+		display: block;
+		line-height: 0;
+		height: 0;
+		overflow: hidden;
+		}*/
+		
+		/*.formkit-form[data-uid="71274de90f"] {
+		margin: 0 auto;
+		margin-top: 1rem;
+		}*/
+		
+		/*.formkit-form[data-uid="71274de90f"] legend {
+		display: none !important;
+		}*/
+		
+		/*.formkit-form[data-uid="71274de90f"] fieldset {
+		display: -webkit-box !important;
+		display: -ms-flexbox !important;
+		display: flex !important;
+		}*/
+		
+		/*.formkit-form[data-uid="71274de90f"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"]:checked + label::before {
+		background-color: #9253BD !important;
+		border-color: #6A3C8A !important;
+		}*/
+		
+		/* Prevents issue of checkbox being lower than text. */
+		/*.formkit-form[data-uid="71274de90f"] [data-group="checkboxes"] [data-group="checkbox"] label::before {
+		top: 0 !important;
+		}*/
+		
+		/* Given the above we also need to change for selected state (which is the ::after) */
+		/*.formkit-form[data-uid="71274de90f"] [data-group="checkboxes"] [data-group="checkbox"] label::after {
+		top: 5px !important;
+		}*/
+		
+		/*@media only screen and (min-width: 600px) {
+		.formkit-form[data-uid="71274de90f"] .formkit-checkboxes {
+		padding-right: 30pt;
+		}
+		}
+		
+		@media only screen and (max-width: 600px) {
+		.formkit-form[data-uid="71274de90f"] .formkit-checkboxes {
+		padding-right: 8pt;
+		font-size: smaller !important;
+		}
+		}*/
+		</style><!-- mnbnbxmbzxmncbzxc -->
+		<!-- qweoqwupeoiqwuewqe --><script>
+		
+		// The previous version of Lyrcs was a Vue.js app that used `#/...` for pages.
+		// carrd.co uses `#...` for pages so we need to redirect any time an old link comes in.
+		(function listenForLegacyHash() {
+		function redirectHash() {
+		const hash = window.location.hash;
+		const newHash = hash.startsWith('#/') ? '#' + hash.slice(2) : hash;
+		if (window.location.hash !== newHash) {
+		window.location.replace(newHash);
+		}
+		}
+		
+		// Initial load
+		redirectHash();
+		
+		// On hash change
+		window.addEventListener('hashchange', redirectHash, false);
+		})();
+		
+		</script><!-- mnbnbxmbzxmncbzxc -->
+		<!-- qweoqwupeoiqwuewqe --><!--
+		The following must be in the head of the page.
+		The hubspot script is manually edited and hosted at:
+		https://github.com/LyrcsOrg/contact-script
+		It is then delivered from the jsDeliver CDN.
+		-->
+		
+		<!-- Start of HubSpot Embed Code -->
+		<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25600389.js"></script>
+		<!-- End of HubSpot Embed Code -->
+		
+		<!-- Start of HubSpot Contact Code -->
+		<!-- Replace `return this.props.noBrandingScope` with `return 1` -->
+		<script charset="utf-8" type="text/javascript" src="https://cdn.jsdelivr.net/gh/LyrcsOrg/contact-script@main/script.js"></script>
+		<!-- End of HubSpot Contact Code --><!-- mnbnbxmbzxmncbzxc -->
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<header id="header">
+						<div id="container04" class="container columns full screen">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image03" class="image">
+											<a href="#home" class="frame"><img src="assets/images/image03.svg" alt="" /></a>
+										</div>
+									</div>
+									<div>
+										<ul id="buttons01" class="buttons">
+											<li>
+												<a href="#contact" class="button n01">Contact Us</a>
+											</li><li>
+												<a href="https://apps.apple.com/app/apple-store/id1599888045?pt=117831961&ct=website&mt=8" class="button n02">Download</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<section id="home-section">
+						<div id="container19" class="container default full screen">
+							<div class="wrapper">
+								<div class="inner">
+									<h2 id="text06">Write Lyrics Fast</h2>
+									<p id="text36">Highlights rhymes, counts syllables, accepts near rhymes, shows chords, organizes sections... and that&#39;s just the beginning.</p>
+								</div>
+							</div>
+						</div>
+						<div id="container18" class="container default full screen">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image05" class="image">
+										<a href="https://apps.apple.com/app/apple-store/id1599888045?pt=117831961&ct=website&mt=8" class="frame"><img src="assets/images/image05.svg" alt="" /></a>
+									</div>
+									<p id="text05">Minimum <strong>macOS 14</strong> &amp; <strong>iOS 17</strong></p>
+								</div>
+							</div>
+						</div>
+						<div id="container07" class="container default full screen">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image01" class="image">
+										<span class="frame deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCAyNTYwIDE0MzYiIHdpZHRoPSIyNTYwIiBoZWlnaHQ9IjE0MzYiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyZWN0IGZpbGw9InRyYW5zcGFyZW50IiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIi8%2BPC9zdmc%2B" data-src="assets/images/image01.png" alt="Screenshot of the macOS version of Lyrcs" /></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container26" class="container default full screen">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image06" class="image">
+										<span class="frame"><img src="assets/images/image06.svg" alt="" /></span>
+									</div>
+									<h2 id="text35">The go to tool for 1000s of producers and writers daily</h2>
+									<p id="text40">Trusted by artists from the world&#39;s biggest labels.</p>
+									<div id="gallery02" class="gallery">
+										<div class="inner">
+											<ul>
+												<li>
+													<span class="frame"><img  src="assets/images/gallery02/b18ae24a.svg" alt="Universal Music Group" /></span>
+												</li><li>
+													<span class="frame"><img  src="assets/images/gallery02/bca4259d.svg" alt="Sony Music" /></span>
+												</li><li>
+													<span class="frame"><img  src="assets/images/gallery02/6055e3fc.svg" alt="Island Records" /></span>
+												</li><li>
+													<span class="frame"><img  src="assets/images/gallery02/b8b4a67d.svg" alt="Interscope" /></span>
+												</li><li>
+													<span class="frame"><img  src="assets/images/gallery02/567c9ff5.svg" alt="Atlantic Records" /></span>
+												</li><li>
+													<span class="frame"><img  src="assets/images/gallery02/d13d0a4b.svg" alt="Warner Music Group" /></span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container02" data-scroll-id="scrollpoint01" data-scroll-behavior="default" data-scroll-offset="0" data-scroll-speed="3" class="style2 container default">
+							<div class="wrapper">
+								<div class="inner">
+									<h2 id="text33" class="style2">Why You&#39;ll Love Lyrcs</h2>
+									<p id="text31" class="style5">All the essential tools to write the perfect story.</p>
+								</div>
+							</div>
+						</div>
+						<div id="container05" class="style1 container columns">
+							<div class="wrapper">
+								<div class="inner" data-reorder="1,0">
+									<div>
+										<div id="video04" class="style1 video-border video">
+											<video src="assets/videos/video04.mp4" poster="assets/videos/video04.mp4.jpg" preload="auto" playsinline webkit-playsinline muted autoplay loop></video>
+										</div>
+									</div>
+									<div>
+										<h3 id="text07" class="style1">Syllable Counting</h3>
+										<p id="text23" class="style4">Say goodbye to counting syllables on your fingers.</p>
+										<div id="list04" class="style1 list"><ul><li><p>See syllables for each line</p></li><li><p>See syllables for a highlighted range</p></li><li><p>Ability to set your own syllable count</p></li></ul></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container06" class="style1 container columns">
+							<div class="wrapper">
+								<div class="inner" data-reorder="0,1">
+									<div>
+										<h3 id="text08" class="style1">Rhyme Highlighting</h3>
+										<p id="text27" class="style4">Every rhyme at the end of a line is highlighted.</p>
+										<div id="list05" class="style1 list"><ul><li><p>Instant</p></li><li><p>20 distinct colors</p></li><li><p>Option to highlight identical words</p></li></ul></div>
+									</div>
+									<div>
+										<div id="video05" class="style1 video-border video">
+											<video src="assets/videos/video05.mp4" poster="assets/videos/video05.mp4.jpg" preload="auto" playsinline webkit-playsinline muted autoplay loop></video>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container08" class="style1 container columns">
+							<div class="wrapper">
+								<div class="inner" data-reorder="1,0">
+									<div>
+										<div id="video06" class="style1 video-border video">
+											<video src="assets/videos/video06.mp4" poster="assets/videos/video06.mp4.jpg" preload="auto" playsinline webkit-playsinline muted autoplay loop></video>
+										</div>
+									</div>
+									<div>
+										<h3 id="text09" class="style1">Rhyming Dictionary</h3>
+										<p id="text28" class="style4">Remember when you used to open rhymezone? Never again.</p>
+										<div id="list06" class="style1 list"><ul><li><p>Completely offline</p></li><li><p>Group by syllables, letters or alphabetically</p></li><li><p>Option to only show 30,000 most common words</p></li></ul></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container09" class="style1 container columns">
+							<div class="wrapper">
+								<div class="inner" data-reorder="0,1">
+									<div>
+										<h3 id="text10" class="style1">Rhyme Links</h3>
+										<p id="text29" class="style4">Create a rhyme from any two words, no matter how different they sound.</p>
+										<div id="list07" class="style1 list"><ul><li><p>Create near rhymes (i.e. home, alone)</p></li><li><p>Reuseable across all files</p></li></ul></div>
+									</div>
+									<div>
+										<div id="video07" class="style1 video-border video">
+											<video src="assets/videos/video07.mp4" poster="assets/videos/video07.mp4.jpg" preload="auto" playsinline webkit-playsinline muted autoplay loop></video>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container01" class="style1 container columns">
+							<div class="wrapper">
+								<div class="inner" data-reorder="1,0">
+									<div>
+										<div id="video09" class="style1 video-border video">
+											<video src="assets/videos/video09.mp4" poster="assets/videos/video09.mp4.jpg" preload="auto" playsinline webkit-playsinline muted autoplay loop></video>
+										</div>
+									</div>
+									<div>
+										<h3 id="text12" class="style1">Annotations</h3>
+										<p id="text30" class="style4">Annotations are ignored by syllable counts and rhyme highlights.</p>
+										<div id="list09" class="style1 list"><ul><li><p>Mark sections</p></li><li><p>Specify chords</p></li><li><p>Leave comments</p></li></ul></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container10" class="style1 container columns">
+							<div class="wrapper">
+								<div class="inner" data-reorder="0,1">
+									<div>
+										<h3 id="text11" class="style1">Metadata</h3>
+										<p id="text17" class="style4">Write down anything about the song or your daily shopping list.</p>
+										<div id="list08" class="style1 list"><ul><li><p>Capture additional details</p></li><li><p>Stored within the same plain text file</p></li></ul></div>
+									</div>
+									<div>
+										<div id="video08" class="style1 video-border video">
+											<video src="assets/videos/video08.mp4" poster="assets/videos/video08.mp4.jpg" preload="auto" playsinline webkit-playsinline muted autoplay loop></video>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container17" class="container default full screen">
+							<div class="wrapper">
+								<div class="inner">
+									<h2 id="text44" class="style2"><span style="color: white">Did Someone Say Mobile App?</span></h2>
+									<p id="text48" class="style5"><span style="color: white">Yes! Sync your lyrics between devices using iCloud.</span></p>
+									<div id="image07" class="image">
+										<span class="frame deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCAxNTg2IDE4OTQiIHdpZHRoPSIxNTg2IiBoZWlnaHQ9IjE4OTQiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyZWN0IGZpbGw9InRyYW5zcGFyZW50IiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIi8%2BPC9zdmc%2B" data-src="assets/images/image07.png" alt="Screenshot of the iOS version of Lyrcs" /></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container16" class="style2 container default">
+							<div class="wrapper">
+								<div class="inner">
+									<h2 id="text26" class="style2">If That Wasn&#39;t Enough</h2>
+									<p id="text32" class="style5">A few more things we think you&#39;ll love.</p>
+								</div>
+							</div>
+						</div>
+						<div id="container15" class="style1 container columns">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="list16" class="style1 list"><ul><li><p><strong>Plain Text</strong><br>Files are simple .txt files; store them locally or in iCloud.</p></li></ul></div>
+									</div>
+									<div>
+										<div id="list01" class="style1 list"><ul><li><p><strong>Dark Mode</strong><br>Get blinded by the brilliant work you create, not by white pixels.</p></li></ul></div>
+									</div>
+									<div>
+										<div id="list10" class="style1 list"><ul><li><p><strong>Printing (PDF)</strong><br>Share your lyrics in a hard copy or PDF.</p></li></ul></div>
+									</div>
+									<div>
+										<div id="list15" class="style1 list"><ul><li><p><strong>Custom Fonts</strong><br>Prefer to write in Comic Sans? Lyrcs doesn&#39;t judge.</p></li></ul></div>
+									</div>
+									<div>
+										<div id="list11" class="style1 list"><ul><li><p><strong>Keyboard shortcuts</strong><br>For the power users, see them <a href="#keyboard-shortcuts">here</a>.</p></li></ul></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container03" class="container columns">
+							<div class="wrapper">
+								<div class="inner" data-reorder="0,1">
+									<div>
+										<h2 id="text13">Like What You See?<br>Download Lyrcs today!</h2>
+										<p id="text14">Find out why so many people are using Lyrcs for songwriting and poetry. Available for macOS and iOS.</p>
+										<div id="image04" class="image">
+											<a href="https://apps.apple.com/app/apple-store/id1599888045?pt=117831961&ct=website&mt=8" class="frame"><img src="assets/images/image04.svg" alt="" /></a>
+										</div>
+									</div>
+									<div>
+										<div id="image02" class="image">
+											<span class="frame"><img src="assets/images/image02.png" alt="" /></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container20" class="style2 container default">
+							<div class="wrapper">
+								<div class="inner">
+									<h2 id="text24" class="style2">Stay Up To Date</h2>
+									<p id="text25" class="style5">Get notified about new features and updates for your platform.</p>
+								</div>
+							</div>
+						</div>
+						<div id="container12" class="container default">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="form-notified">
+										<!-- qweoqwupeoiqwuewqe --><script async data-uid="71274de90f" src="https://colossal-knitter-8833.ck.page/71274de90f/index.js"></script><!-- mnbnbxmbzxmncbzxc -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="faq-section">
+						<div id="container21" class="style4 container default">
+							<div class="wrapper">
+								<div class="inner">
+									<h2 id="text45" class="style2">Frequently Asked Questions</h2>
+									<p id="text46" class="style5">Maybe the answer to what you&#39;re looking for is already here.</p>
+								</div>
+							</div>
+						</div>
+						<div id="container25" class="style3 container default">
+							<div class="wrapper">
+								<div class="inner">
+									<p id="text19" class="style6"><strong>I found a bug, could you fix it?</strong><br>Yes, we would love to! Please <a href="#contact">contact us here</a>.</p>
+									<p id="text37" class="style6"><strong>Could Lyrcs have a feature where ...?</strong><br>Yes, of course! Please <a href="#contact">contact us here</a>.</p>
+									<p id="text38" class="style6"><strong>If I subscribe to PRO from the macOS app, will I have access to PRO in the iOS app (or vice versa)?</strong><br>Yes, you will need to be signed into the same Apple account on both apps and use the <strong><span style="color: #6A3C8A">Restore Purchases</span></strong> button.</p>
+									<p id="text39" class="style6"><strong>Is Lyrcs free to download?</strong><br>Yes but it contains some optional in-app purchases to take your writing to the next level.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="keyboard-shortcuts-section">
+						<div id="container11" class="style4 container default">
+							<div class="wrapper">
+								<div class="inner">
+									<h2 id="text02" class="style2">Keyboard Shortcuts</h2>
+									<p id="text22" class="style5">For the power users that need a touch of convenience.</p>
+								</div>
+							</div>
+						</div>
+						<div id="table01" class="style1 table-wrapper">
+							<div class="table-inner">
+								<table>
+									<thead>
+										<tr>
+											<th>Action</th>
+											<th>Keys</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Toggle Rhyme Panel</td>
+											<td>⌘ ⇧ R</td>
+										</tr>
+										<tr>
+											<td>Focus Rhyme Search Bar</td>
+											<td>⌘ R (rhyme panel must be opened)</td>
+										</tr>
+										<tr>
+											<td>Font Increase</td>
+											<td>⌘ +</td>
+										</tr>
+										<tr>
+											<td>Font Decrease</td>
+											<td>⌘ -</td>
+										</tr>
+										<tr>
+											<td>Font Reset</td>
+											<td>⌘ 0</td>
+										</tr>
+										<tr>
+											<td>New Tab</td>
+											<td>⌘ T</td>
+										</tr>
+										<tr>
+											<td>Print</td>
+											<td>⌘ P</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</section>
+					<section id="contact-section">
+						<div id="container24" class="style4 container default">
+							<div class="wrapper">
+								<div class="inner">
+									<h2 id="text04" class="style2">Contact Us</h2>
+									<p id="text16" class="style5">Found a bug? Have a feature request? Send us a message about anything.</p>
+								</div>
+							</div>
+						</div>
+						<div id="embed04">
+							<!-- qweoqwupeoiqwuewqe --><script>
+							hbspt.forms.create({
+							region: "eu1",
+							portalId: "25600389",
+							formId: "e5b99bd2-e563-4c7a-8c10-ea1105f864ca"
+							});
+							</script><!-- mnbnbxmbzxmncbzxc -->
+						</div>
+					</section>
+					<section id="privacy-section">
+						<div id="container22" class="style4 container default">
+							<div class="wrapper">
+								<div class="inner">
+									<h2 id="text01" class="style2">Privacy Policy</h2>
+									<p id="text47" class="style5">Ways we look after your data.</p>
+								</div>
+							</div>
+						</div>
+						<div id="container23" class="style3 container default">
+							<div class="wrapper">
+								<div class="inner">
+									<p id="text42" class="style6"><span class="p">The Lyrcs app itself does not collect any personally identifiable data.</span><span class="p">It does collect usage and crash data to improve features and address bugs using SDKs provided by Google. The privacy policy of these are located here:</span><span class="p">• <a href="https://www.google.com/analytics/terms/">Google Analytics for Firebase</a><br />• <a href="https://firebase.google.com/support/privacy/">Firebase Crashlytics</a></span><span class="p">If you have any question, feel free to <a href="#contact">contact us</a>.</span></p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<footer id="footer">
+						<div id="container13" class="container columns full screen">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<p id="text20" class="style3">SUPPORT</p>
+										<ul id="links01" class="style1 links">
+											<li class="n01">
+												<a href="#faq">FAQ</a>
+											</li><li class="n02">
+												<a href="#keyboard-shortcuts">Keyboard Shortcuts</a>
+											</li><li class="n03">
+												<a href="#contact">Contact Us</a>
+											</li><li class="n04">
+												<a href="#privacy">Privacy Policy</a>
+											</li>
+										</ul>
+									</div>
+									<div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container14" class="container columns full screen">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<p id="text21">Established © 2021 Lyrcs</p>
+									</div>
+									<div>
+										<ul id="icons01" class="icons">
+											<li>
+												<a class="n01" href="https://www.facebook.com/LyrcsApp/">
+													<svg aria-labelledby="icon-title"><title id="icon-title">Facebook</title><use xlink:href="assets/icons.svg#facebook"></use></svg>
+													<span class="label">Facebook</span>
+												</a>
+											</li><li>
+												<a class="n02" href="https://www.instagram.com/lyrcs.app/">
+													<svg aria-labelledby="icon-title"><title id="icon-title">Instagram</title><use xlink:href="assets/icons.svg#instagram"></use></svg>
+													<span class="label">Instagram</span>
+												</a>
+											</li><li>
+												<a class="n03" href="https://twitter.com/LyrcsApp">
+													<svg aria-labelledby="icon-title"><title id="icon-title">Twitter</title><use xlink:href="assets/icons.svg#twitter"></use></svg>
+													<span class="label">Twitter</span>
+												</a>
+											</li><li>
+												<a class="n04" href="https://github.com/LyrcsOrg">
+													<svg aria-labelledby="icon-title"><title id="icon-title">GitHub</title><use xlink:href="assets/icons.svg#github"></use></svg>
+													<span class="label">GitHub</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+		<script src="assets/main.js"></script>
+	</body>
 </html>
