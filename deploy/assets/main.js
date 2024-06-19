@@ -204,6 +204,30 @@
 				return a;
 		
 			},
+			escapeHtml = function(s) {
+		
+				// Blank, null, or undefined? Return blank string.
+					if (s === ''
+					||	s === null
+					||	s === undefined)
+						return '';
+		
+				// Escape HTML characters.
+					var a = {
+						'&': '&amp;',
+						'<': '&lt;',
+						'>': '&gt;',
+						'"': '&quot;',
+						"'": '&#39;',
+					};
+		
+					s = s.replace(/[&<>"']/g, function(x) {
+						return a[x];
+					});
+		
+				return s;
+		
+			},
 			thisHash = function() {
 		
 				var h = location.hash ? location.hash.substring(1) : null,
@@ -953,7 +977,7 @@
 								function() { 
 									gtag('event', 'page_view', {
 										'page_title': 'Faq',
-										'page_location': 'https://lyrcs.crd.co/#faq',
+										'page_location': '/#faq',
 									});
 								},
 							],
@@ -965,7 +989,7 @@
 								function() { 
 									gtag('event', 'page_view', {
 										'page_title': 'Keyboard-shortcuts',
-										'page_location': 'https://lyrcs.crd.co/#keyboard-shortcuts',
+										'page_location': '/#keyboard-shortcuts',
 									});
 								},
 							],
@@ -977,7 +1001,7 @@
 								function() { 
 									gtag('event', 'page_view', {
 										'page_title': 'Contact',
-										'page_location': 'https://lyrcs.crd.co/#contact',
+										'page_location': '/#contact',
 									});
 								},
 							],
@@ -989,7 +1013,7 @@
 								function() { 
 									gtag('event', 'page_view', {
 										'page_title': 'Privacy',
-										'page_location': 'https://lyrcs.crd.co/#privacy',
+										'page_location': '/#privacy',
 									});
 								},
 							],
@@ -1001,7 +1025,7 @@
 								function() { 
 									gtag('event', 'page_view', {
 										'page_title': 'Lyrcs-vs-lyricstudio',
-										'page_location': 'https://lyrcs.crd.co/#lyrcs-vs-lyricstudio',
+										'page_location': '/#lyrcs-vs-lyricstudio',
 									});
 								},
 							],
@@ -1013,7 +1037,7 @@
 								function() { 
 									gtag('event', 'page_view', {
 										'page_title': 'Home',
-										'page_location': 'https://lyrcs.crd.co',
+										'page_location': '',
 									});
 								},
 							],
