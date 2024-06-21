@@ -22,6 +22,10 @@ jobs:
         folder: deploy
         clean-exclude: "CNAME"
 
+    - name: Switch branch
+      run: |
+        git checkout gh-pages
+
     - name: Generate the sitemap
       id: sitemap
       uses: cicirello/generate-sitemap@v1
