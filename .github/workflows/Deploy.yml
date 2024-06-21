@@ -25,6 +25,7 @@ jobs:
     - name: Switch branch
       run: |
         git checkout gh-pages
+        git fetch
         git pull
 
     - name: Generate the sitemap
