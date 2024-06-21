@@ -10,8 +10,9 @@ jobs:
     steps:
 
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
+        persist-credentials: false # Requirement of https://github.com/ad-m/github-push-action?tab=readme-ov-file#example-workflow-file
         fetch-depth: 0 # Requirement of https://github.com/marketplace/actions/generate-sitemap#requirements
 
     - name: Deploy 🚀
@@ -32,3 +33,15 @@ jobs:
         echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
         echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
         echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
+
+    - name: Commit sitemap
+      run: |
+        git config --local user.email "bot@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -a -m "Generate sitemap"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
