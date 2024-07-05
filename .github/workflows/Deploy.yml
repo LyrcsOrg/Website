@@ -25,6 +25,9 @@ jobs:
     - name: Switch branch
       run: |
         git checkout gh-pages
+        # Need to fetch and pull because the `deploy` command has committed changes to the branch in the mean time
+        git fetch
+        git pull
 
     - name: Generate the sitemap
       id: sitemap
