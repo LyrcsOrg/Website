@@ -561,6 +561,7 @@
 				header, footer, name, hideHeader, hideFooter, disableAutoScroll,
 				h, e, ee, k,
 				locked = false,
+				title = document.title,
 				scrollPointParent = function(target) {
 		
 					while (target) {
@@ -893,6 +894,9 @@
 									currentSection.classList.remove('active');
 									currentSection.style.display = 'none';
 		
+								// Reset title.
+									document.title = title;
+		
 								// Unload elements.
 									unloadElements(currentSection);
 		
@@ -932,6 +936,10 @@
 		
 							// Trigger 'resize' event.
 								trigger('resize');
+		
+							// Update title.
+								if (section.dataset.title)
+									document.title = section.dataset.title + ' - ' + title;
 		
 							// Load elements.
 								loadElements(section);
@@ -1174,6 +1182,10 @@
 		
 							// Event: On Open.
 								doEvent(initialId, 'onopen');
+		
+					// Update title.
+						if (initialSection.dataset.title)
+							document.title = initialSection.dataset.title + ' - ' + title;
 		
 					// Load elements.
 						loadElements(initialSection);
