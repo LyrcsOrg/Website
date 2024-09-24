@@ -22,34 +22,34 @@ jobs:
         folder: deploy
         clean-exclude: "CNAME"
 
-    - name: Switch branch
-      run: |
-        git checkout gh-pages
-        # Need to fetch and pull because the `deploy` command has committed changes to the branch in the mean time
-        git fetch
-        git pull
-
-    - name: Generate the sitemap
-      id: sitemap
-      uses: cicirello/generate-sitemap@v1
-      with:
-        base-url-path: https://lyrcs.app/
-
-    - name: Output stats
-      run: |
-        echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
-        echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
-        echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
-
-    - name: Commit sitemap
-      run: |
-        git config --local user.email "bot@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add sitemap.xml
-        git commit -a -m "Generate sitemap"
-
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh-pages
+#    - name: Switch branch
+#      run: |
+#        git checkout gh-pages
+#        # Need to fetch and pull because the `deploy` command has committed changes to the branch in the mean time
+#        git fetch
+#        git pull
+#
+#    - name: Generate the sitemap
+#      id: sitemap
+#      uses: cicirello/generate-sitemap@v1
+#      with:
+#        base-url-path: https://lyrcs.app/
+#
+#    - name: Output stats
+#      run: |
+#        echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
+#        echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
+#        echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
+#
+#    - name: Commit sitemap
+#      run: |
+#        git config --local user.email "bot@users.noreply.github.com"
+#        git config --local user.name "github-actions[bot]"
+#        git add sitemap.xml
+#        git commit -a -m "Generate sitemap"
+#
+#    - name: Push changes
+#      uses: ad-m/github-push-action@master
+#      with:
+#        github_token: ${{ secrets.GITHUB_TOKEN }}
+#        branch: gh-pages
